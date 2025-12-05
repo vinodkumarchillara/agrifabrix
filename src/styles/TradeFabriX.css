@@ -1,0 +1,295 @@
+/* ========================================================= */
+/*                      GLOBAL + WRAPPER                     */
+/* ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.trad-section {
+  width: 100%;
+  padding: 0px 0px 60px;
+  background: linear-gradient(180deg, #ffffff 100%, #f9fff9 0%);
+  animation: fadeIn 1s ease;
+}
+
+.trad-container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+
+
+/* ========================================================= */
+/*                         VIDEO HERO                         */
+/* ========================================================= */
+
+/* NEW HERO → video replaces image */
+.trad-hero.video-hero {
+  position: relative;
+  width: 100%;
+  height: 470px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+
+/* Background video */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 130%;   /* slightly zoomed */
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  animation: credZoom 12s ease-in-out infinite alternate;
+}
+
+/* Dark overlay on video */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 2;
+}
+
+/* Hero text on video */
+.hero-text {
+  position: relative;
+  z-index: 3;
+  color: #ffffff !important;
+  max-width: 650px;
+  margin-left: 50px;
+  bottom: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+.hero-text h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ffffff !important;
+}
+
+.hero-text h3 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #f1f1f1 !important;
+}
+
+.hero-text p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #ffffff !important;
+}
+
+
+
+/* ========================================================= */
+/*            REMOVE OLD IMAGE HERO STYLING                   */
+/* ========================================================= */
+
+.trad-img {
+  display: none !important;     /* ❌ Completely remove old image hero */
+}
+
+
+
+/* ========================================================= */
+/*                       SECTION TITLES                      */
+/* ========================================================= */
+
+.trad-label h3 {
+  font-size: 2rem;
+  color: #1b5e20;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+
+
+/* ========================================================= */
+/*                        CARD GRID                          */
+/* ========================================================= */
+
+.trad-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+
+
+/* ========================================================= */
+/*                      INDIVIDUAL CARDS                     */
+/* ========================================================= */
+
+.trad-card {
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+
+.trad-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Watermark on hover */
+.trad-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/logo1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120px;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.trad-card:hover::before {
+  opacity: 0.1;
+  transform: scale(1.05);
+}
+
+/* Alternating backgrounds */
+.trad-card:nth-child(odd) { background: #f1f8e9; }
+.trad-card:nth-child(even) { background: #e8f5e9; }
+
+.trad-title-item {
+  color: #2e7d32;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.trad-body-item {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+
+/* ========================================================= */
+/*                         CTA BUTTON                        */
+/* ========================================================= */
+
+.trad-btn-container {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.trad-btn {
+  background: linear-gradient(90deg, #43a047, #66bb6a);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.trad-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* ========================================================= */
+/*                        LEAF DECORATION                    */
+/* ========================================================= */
+
+.trad-leaf {
+  position: relative;
+  padding: 40px 0;
+}
+
+.trad-leaf::before,
+.trad-leaf::after {
+  content: "";
+  position: absolute;
+  background: url('../images/leaf.png') no-repeat center/contain;
+  opacity: 0.5;
+}
+
+.trad-leaf::before {
+  top: -10px;
+  left: -20px;
+  width: 60px;
+  height: 60px;
+}
+
+.trad-leaf::after {
+  bottom: -20px;
+  right: -20px;
+  width: 70px;
+  height: 70px;
+}
+
+
+
+/* ========================================================= */
+/*                        RESPONSIVE                         */
+/* ========================================================= */
+
+@media (max-width: 1024px) {
+  .hero-text h2 { font-size: 2.8rem; }
+  .hero-text h3 { font-size: 1.4rem; }
+}
+
+@media (max-width: 768px) {
+
+  .trad-hero.video-hero {
+    height: 350px;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .hero-text {
+    margin-left: 0;
+    bottom: 0;
+    text-align: center;
+  }
+
+  .trad-card-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero-text h2 { font-size: 2rem; }
+  .hero-text h3 { font-size: 1rem; }
+  .hero-text p { font-size: 1rem; }
+
+  .trad-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trad-btn {
+    width: 100%;
+    padding: 14px;
+  }
+}
+
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

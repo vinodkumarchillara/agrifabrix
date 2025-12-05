@@ -1,0 +1,350 @@
+/* ===== Global Reset ===== */
+* {
+  box-sizing: border-box;
+}
+
+/* ===== Section Wrapper ===== */
+.tracefabrx-section {
+  width: 100%;
+  padding: 0 0 60px;
+  background: linear-gradient(180deg, #ffffff 100%, #f9fff9 0%);
+  animation: fadeIn 1s ease;
+  overflow: hidden;
+}
+
+/* ===== Container ===== */
+.tracefabrx-container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* ======================================================= */
+/*                VIDEO HERO SECTION                        */
+/* ======================================================= */
+
+.tracefabrx-hero.video-hero {
+  position: relative;
+  width: 100%;
+  height: 470px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+
+/* Background Video */
+.trace-hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+/* Overlay */
+.trace-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 2;
+}
+
+/* Text on Hero */
+.trace-hero-text {
+  position: relative;
+  z-index: 3;
+  color: #ffffff !important;
+  max-width: 650px;
+  margin-left: 50px;
+  bottom: 40px;
+}
+
+.trace-hero-text h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff !important;
+}
+
+.trace-hero-text h3 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #f1f1f1 !important;
+}
+
+.trace-hero-text p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #ffffff !important;
+}
+
+
+
+.tracefabrx-label{
+    margin-right: 10px;
+  margin-left: 10px;
+}
+/* ===== Section Titles ===== */
+.tracefabrx-label h3 {
+  font-size: 2rem;
+  color: #1b5e20;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ========================================================= */
+/*                      2×2 GRID CARDS                       */
+/* ========================================================= */
+
+.tracefabrx-card-grid.fixed-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 260px);
+  gap: 25px;
+    margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* Card With Image Background */
+.tracefabrx-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* border-radius: 16px; */
+  overflow: hidden;
+
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+  transition: 0.3s ease;
+}
+
+/* Dark Overlay */
+.trace-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+  transition: 0.3s ease;
+}
+
+.tracefabrx-card:hover .trace-card-overlay {
+  background: rgba(0,0,0,0.25);
+}
+
+/* Text Inside Card */
+.trace-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.tracefabrx-title-item {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+.tracefabrx-body-item {
+  color: #f2f2f2;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ========================================================= */
+/*                   CTA BUTTON                              */
+/* ========================================================= */
+
+.tracefabrx-button-container {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.tracefabrx-button {
+  background: linear-gradient(90deg, #43a047, #66bb6a);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  /* border-radius: 30px; */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  max-width: 300px;
+  width: 100%;
+}
+
+.tracefabrx-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ========================================================= */
+/*                Leaf Decoration                            */
+/* ========================================================= */
+
+.leaf-decor {
+  position: relative;
+  padding: 40px 0;
+}
+
+.leaf-decor::before,
+.leaf-decor::after {
+  content: "";
+  position: absolute;
+  background: url('../images/leaf.png') no-repeat center/contain;
+  opacity: 0.5;
+}
+
+.leaf-decor::before {
+  top: -10px;
+  left: -20px;
+  width: 60px;
+  height: 60px;
+}
+
+.leaf-decor::after {
+  bottom: -20px;
+  right: -20px;
+  width: 70px;
+  height: 70px;
+}
+
+/* ======================================= */
+/*       BENEFITS SECTION – 3 COLUMNS      */
+/* ======================================= */
+
+.tracefabrx-benefits-section {
+  background: linear-gradient(135deg, #0b6836, #0f8b4b);
+  padding: 60px 40px;
+  border-radius: 0;
+  color: white;
+  margin-top: 40px;
+}
+
+/* Grid for 3 columns */
+.tracefabrx-benefits-grid.three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+  position: relative;
+}
+
+/* Dashed vertical dividers */
+.tracefabrx-benefits-grid.three-col .tracefabrx-benefit-box:not(:last-child) {
+  border-right: 1px dashed rgba(255,255,255,0.4);
+  padding-right: 30px;
+}
+
+/* Icon circle */
+.trace-benefit-icon {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px auto;
+}
+
+.trace-benefit-icon span {
+  color: #0a6735;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Title */
+.trace-benefit-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.tracefabrx-label h3{
+    font-size: 3rem;
+  color: rgba(255,255,255,0.9);
+
+
+}
+
+/* Description */
+.trace-benefit-body {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.6;
+  max-width: 280px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .tracefabrx-benefits-grid.three-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tracefabrx-benefits-grid.three-col .tracefabrx-benefit-box:nth-child(2) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .tracefabrx-benefits-grid.three-col {
+    grid-template-columns: 1fr;
+  }
+
+  .tracefabrx-benefits-grid.three-col .tracefabrx-benefit-box {
+    border-right: none;
+    padding-right: 0;
+    padding-bottom: 30px;
+  }
+}
+
+
+/* ========================================================= */
+/*                  RESPONSIVE                               */
+/* ========================================================= */
+
+@media (max-width: 1024px) {
+  .trace-hero-text h2 { font-size: 2.3rem; }
+  .trace-hero-text h3 { font-size: 1.2rem; }
+}
+
+@media (max-width: 768px) {
+
+  .tracefabrx-hero.video-hero {
+    height: 350px;
+    padding: 20px;
+  }
+
+  .tracefabrx-card-grid.fixed-2x2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .tracefabrx-card {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trace-hero-text h2 { font-size: 1.8rem; }
+  .trace-hero-text h3 { font-size: 1rem; }
+  .trace-hero-text p  { font-size: 0.9rem; }
+
+  .tracefabrx-card-grid.fixed-2x2 {
+    grid-template-columns: 1fr;
+  }
+}

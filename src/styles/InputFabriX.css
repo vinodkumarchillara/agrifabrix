@@ -1,0 +1,334 @@
+/* ===== Global Reset ===== */
+/* * {
+  box-sizing: border-box;
+} */
+
+/* ================================================= */
+/*                VIDEO HERO SECTION                 */
+/* ================================================= */
+
+.video-hero {
+  position: relative;
+  width: 100%;
+  height: 470px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;              /* 🔥 Remove padding */
+  margin: 0;               /* 🔥 Ensure no extra space */
+  border-radius: 0;        /* 🔥 No curves */
+}
+
+
+/* Background Video */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Dark Overlay */
+/* .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 2;
+} */
+
+/* Hero Text (ALWAYS WHITE) */
+.hero-text {
+  position: relative;
+  z-index: 3;
+  color: #ffffff !important;
+  max-width: 650px;
+  margin-left: 50px;
+  bottom: 40px;
+}
+
+.hero-text h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff !important;
+}
+
+.hero-text h3 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #f1f1f1 !important;
+}
+
+.hero-text p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #ffffff !important;
+}
+
+/* ================================================= */
+/*                MAIN SECTION WRAPPER               */
+/* ================================================= */
+
+.inputfabrx-section {
+  width: 100%;
+  padding: 0 0 30px;
+  background: linear-gradient(180deg, #ffffff 100%, #f9fff9 0%);
+  animation: fadeIn 1s ease;
+}
+
+.inputfabrx-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.inputfabrx-label h3 {
+  font-size: 4rem;
+  color: #1b5e20;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* ================================================= */
+/*           UNEVEN 2-ROW OFFERING GRID              */
+/* ================================================= */
+
+.uneven-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 250px 250px;
+  gap: 25px;
+  grid-auto-flow: dense;
+}
+
+/* Row 1 */
+.card-0 { grid-column: span 3; grid-row: 1; }
+.card-1 { grid-column: span 3; grid-row: 1; }
+
+/* Row 2 */
+.card-2 { grid-column: span 2; grid-row: 2; }
+.card-3 { grid-column: span 2; grid-row: 2; }
+.card-4 { grid-column: span 2; grid-row: 2; }
+
+/* Smaller title sizing for specific cards */
+.card-3 .inputfabrx-title-item,
+.card-4 .inputfabrx-title-item {
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+/* ================================================= */
+/*       OFFERING CARDS: BACKGROUND + OVERLAY        */
+/* ================================================= */
+
+.inputfabrx-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  color: #fff;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+/* Background Image */
+.card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  z-index: 1;
+  transition: transform 0.4s ease;
+}
+
+/* Overlay */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.30);
+  z-index: 2;
+}
+
+/* Hover Effects */
+.inputfabrx-card:hover .card-bg {
+  transform: scale(1.08);
+}
+
+.inputfabrx-card:hover .card-overlay {
+  background: rgba(0,0,0,0.18);
+}
+
+/* Text Content */
+.card-content {
+  position: relative;
+  z-index: 3;
+}
+
+.inputfabrx-title-item {
+  color: #fff;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.inputfabrx-body-item {
+  font-size: 1rem;
+  color: #eaeaea;
+  line-height: 1.5;
+}
+
+/* ================================================= */
+/*                BENEFITS (3 Equal Boxes)           */
+/* ================================================= */
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.benefit-box {
+  padding: 0 20px;
+}
+
+.benefit-box:not(:last-child) {
+  border-right: 1px dashed rgba(0, 0, 0, 0.25);
+}
+
+.benefit-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1b5e20;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.benefit-body {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* ================================================= */
+/*                   CTA BUTTON                      */
+/* ================================================= */
+
+.inputfabrx-button-container {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.inputfabrx-button {
+  background: linear-gradient(90deg, #43a047, #66bb6a);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  max-width: 300px;
+  width: 100%;
+}
+
+.inputfabrx-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ================================================= */
+/*                DECORATIVE LEAVES                  */
+/* ================================================= */
+
+.leaf-decor {
+  position: relative;
+  padding: 40px 0;
+}
+
+.leaf-decor::before,
+.leaf-decor::after {
+  content: "";
+  position: absolute;
+  background: url('../images/leaf.png') no-repeat center/contain;
+  opacity: 0.5;
+}
+
+.leaf-decor::before { top: -10px; left: -20px; width: 60px; height: 60px; }
+.leaf-decor::after { bottom: -20px; right: -20px; width: 70px; height: 70px; }
+
+/* ================================================= */
+/*                   RESPONSIVE STYLES               */
+/* ================================================= */
+
+@media (max-width: 1024px) {
+  .uneven-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 220px 220px;
+  }
+}
+
+@media (max-width: 992px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefit-box:nth-child(2) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-hero {
+    height: 350px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .uneven-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 200px 200px 200px;
+  }
+
+  .card-0,
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-box {
+    border-right: none;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-hero {
+    height: 300px;
+  }
+
+  .uneven-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 200px);
+  }
+
+  .hero-text h2 {
+    font-size: 2.5rem;
+  }
+}

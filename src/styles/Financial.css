@@ -1,0 +1,377 @@
+/* ========================================================= */
+/*                    GLOBAL + PAGE WRAPPER                  */
+/* ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.cred-section {
+  width: 100%;
+  background: linear-gradient(180deg, #ffffff 100%, #f9fff9 0%);
+  animation: fadeIn 1s ease;
+  overflow: hidden;
+}
+
+.cred-container {
+  max-width: 1400px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ========================================================= */
+/*                        VIDEO HERO                          */
+/* ========================================================= */
+
+.cred-hero {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+}
+
+.cred-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 130%;   /* slightly zoomed */
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  animation: credZoom 12s ease-in-out infinite alternate;
+}
+
+
+.cred-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 2;
+}
+
+/* HERO TEXT */
+.cred-hero-text {
+  position: relative;
+  z-index: 3;
+  color: #ffffff !important;
+  max-width: 650px;
+  margin-left: 30px;
+  bottom: 260px;
+}
+
+.cred-hero-text h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff !important;
+}
+
+.cred-hero-text h3 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #f1f1f1 !important;
+}
+
+.cred-hero-text p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #ffffff !important;
+}
+
+
+/* ========================================================= */
+/*                           INTRO                           */
+/* ========================================================= */
+
+.cred-border {
+  width: 110%;
+  height: 45px;
+  background-image: url("../images/green_border.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.cred-border-top { transform: none; }
+.cred-border-bottom { transform: rotate(180deg); margin-top: -1px; }
+
+.cred-intro-box {
+  background: #258855;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  padding: 25px 25px;
+}
+
+.cred-intro-box p {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+
+/* ========================================================= */
+/*                     SOLUTIONS SECTION                     */
+/* ========================================================= */
+
+.cred-solutions {
+  background: linear-gradient(135deg, #0e7a46, #0b5f38);
+  padding: 60px 30px;
+  border-radius: 0 0 60px 60px;
+  color: #fff;
+  margin: 40px 0;
+}
+
+.cred-solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+/* Dashed separator */
+.cred-solutions-grid .cred-solution-box:not(:last-child) {
+  border-right: 1px dashed rgba(255, 255, 255, 0.4);
+  padding-right: 40px;
+}
+
+.cred-solution-box {
+  text-align: center;
+}
+
+.cred-solution-icon {
+  width: 90px;
+  height: 90px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b5e38;
+  font-size: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cred-solution-sub {
+  font-size: 1.1rem;
+  color: #e7e7e7;
+  margin-bottom: 10px;
+}
+
+.cred-solution-box p {
+  font-size: 1rem;
+  color: #e7e7e7;
+  line-height: 1.6;
+}
+
+
+/* ========================================================= */
+/*                       APPLY STEPS                         */
+/* ========================================================= */
+
+.cred-label h3 {
+  font-size: 2rem;
+  color: #1b5e20;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.cred-apply-steps {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.cred-apply-image img {
+  width: 320px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.cred-step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-left: 20px;
+  position: relative;
+}
+
+/* Vertical line */
+.cred-step-list::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 10px;
+  width: 3px;
+  height: 95%;
+  background: #1b5e20;
+  border-radius: 10px;
+  opacity: 0.4;
+}
+
+.cred-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.cred-step-number {
+  width: 40px;
+  height: 40px;
+  background: #047857;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cred-step-item p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+
+/* ========================================================= */
+/*                     WHY CHOOSE US                         */
+/* ========================================================= */
+
+.cred-why-box {
+  background: linear-gradient(135deg, #1d7d4b, #27a162);
+  padding: 50px 30px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  color: #fff;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+}
+
+.cred-why-box ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto 25px;
+}
+
+.cred-why-box ul li {
+  font-size: 1.1rem;
+  padding: 12px 0;
+  border-bottom: 1px dashed rgba(255,255,255,0.3);
+}
+
+.cred-why-box ul li:last-child {
+  border-bottom: none;
+}
+
+.cred-highlight {
+  background: rgba(255,255,255,0.12);
+  padding: 12px 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.cred-btn {
+  background: #ffffff;
+  color: #047857;
+  font-weight: 700;
+  padding: 12px 28px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cred-btn:hover {
+  background: #dff8e9;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+
+/* ========================================================= */
+/*                        RESPONSIVE                         */
+/* ========================================================= */
+
+@media (max-width: 768px) {
+
+  .cred-hero {
+    height: 380px;
+    padding: 20px;
+  }
+
+  .cred-hero-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .cred-solutions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cred-solutions-grid .cred-solution-box {
+    border-right: none;
+    padding-right: 0;
+    padding-bottom: 30px;
+  }
+
+  .cred-apply-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cred-apply-image img {
+    width: 85%;
+  }
+
+  .cred-step-list::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .cred-step-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .cred-hero {
+    height: 320px;
+  }
+
+  .cred-hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .cred-why-box ul li {
+    font-size: 1rem;
+  }
+}
+
+
+/* ========================================================= */
+/*                         ANIMATION                         */
+/* ========================================================= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

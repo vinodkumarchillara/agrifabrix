@@ -1,0 +1,308 @@
+/* ======================== */
+/*      GLOBAL RESET        */
+/* ======================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ======================== */
+/*     HERO FULLSCREEN      */
+/* ======================== */
+
+.sol-section {
+  width: 100%;
+  background: #fff;
+  animation: fadeIn 0.8s ease;
+  overflow: hidden;
+}
+
+/* HERO BANNER */
+.sol-hero-banner {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.sol-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dark Overlay */
+.sol-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.65)
+  );
+  z-index: 1;
+}
+
+/* HERO TEXT */
+.sol-hero-text {
+  position: absolute;
+  bottom: 40px;
+  left: 60px;
+  z-index: 2;
+  color: white;
+  max-width: 600px;
+}
+
+.sol-hero-text h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.sol-hero-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+/* Hero Button */
+.sol-hero-btn {
+  background: #4CAF50;
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.sol-hero-btn:hover {
+  background: #2d7a2d;
+  transform: translateY(-3px);
+}
+
+/* ======================== */
+/*       CHALLENGES         */
+/* ======================== */
+
+.sol-challenges-container {
+  padding: 50px 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.sol-challenges-title {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+}
+
+.sol-challenge-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.sol-challenge-card {
+  flex: 1;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  position: relative;
+  transition: 0.35s ease;
+  min-width: 220px;
+  overflow: hidden;
+}
+
+.sol-challenge-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(166,243,168,0.45);
+}
+
+/* Watermark */
+.sol-challenge-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/logo1.jpg");
+  background-size: 130px;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.sol-challenge-card:hover::before {
+  opacity: 0.12;
+}
+
+/* ======================== */
+/*     UNEVEN GRID LAYOUT   */
+/* ======================== */
+
+.sol-uneven-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  width: 92%;
+  max-width: 1350px;
+  margin: 50px auto;
+}
+
+/* Base Card */
+.sol-ug-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  /* border-radius: 12px; */
+}
+
+.sol-ug-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.35s ease;
+}
+
+.sol-ug-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Overlay */
+.sol-ug-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.65)
+  );
+  z-index: 1;
+  transition: 0.35s ease;
+}
+
+.sol-ug-card:hover::after {
+  background: linear-gradient(
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.85)
+  );
+}
+
+/* Text inside card */
+.sol-ug-text {
+  position: absolute;
+  bottom: 0;
+  padding: 18px;
+  width: 100%;
+  z-index: 2;
+  color: white;
+}
+
+.sol-ug-text h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.sol-ug-text p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Buttons inside grid */
+.sol-ug-btn {
+  margin-top: 12px;
+  background: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.sol-ug-btn:hover {
+  background: #2d7a2d;
+  transform: translateX(4px);
+}
+
+.sol-ug-btn::after {
+  content: "→";
+  margin-left: 6px;
+}
+
+/* ======================== */
+/*   GRID HEIGHT RULES      */
+/* ======================== */
+
+.sol-big-wide {
+  height: 330px;
+  grid-column: span 2;
+}
+
+.sol-big-tall {
+  height: 330px;
+}
+
+.sol-medium-wide {
+  height: 300px;
+}
+
+.sol-small-card {
+  height: 300px;
+}
+
+.sol-medium-tall {
+  height: 300px;
+}
+
+/* ======================== */
+/*       RESPONSIVE         */
+/* ======================== */
+
+@media (max-width: 768px) {
+
+  .sol-hero-text {
+    bottom: 40px;
+    left: 20px;
+    max-width: 90%;
+  }
+
+  .sol-hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .sol-hero-text p {
+    font-size: 1rem;
+  }
+
+  .sol-challenge-grid {
+    flex-direction: column;
+  }
+
+  .sol-uneven-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sol-big-wide,
+  .sol-big-tall,
+  .sol-medium-wide,
+  .sol-small-card,
+  .sol-medium-tall {
+    grid-column: span 1 !important;
+    height: 260px;
+  }
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}

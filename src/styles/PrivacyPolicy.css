@@ -1,0 +1,87 @@
+.privacy-container {
+  max-width: 900px;
+  /* margin: 60px auto; */
+  background: white;
+  padding:100px 20px 50px; 
+ margin-left: 230px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  animation: fadeIn 1s ease; /* Fade-in animation */
+  line-height: 1.7;
+  
+}
+
+.privacy-heading {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #008c70;
+  text-align: center;
+}
+
+.privacy-subheading {
+  font-size: 1.4rem;
+  margin-top: 30px;
+  color: #008c70;
+}
+
+.privacy-paragraph {
+  margin-bottom: 15px;
+}
+
+.privacy-list {
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.privacy-list li {
+  margin-bottom: 8px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Tablet Version */
+@media (max-width: 1024px) {
+  .privacy-container {
+    margin: 30px 20px;
+    padding: 25px;
+  }
+
+  .privacy-heading {
+    font-size: 2rem;
+  }
+
+  .privacy-subheading {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile Version */
+@media (max-width: 1024px) {
+  .privacy-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .privacy-heading {
+    font-size: 1.8rem;
+  }
+
+  .privacy-subheading {
+    font-size: 1.1rem;
+  }
+
+  .privacy-paragraph,
+  .privacy-list {
+    font-size: 0.95rem;
+  }
+}

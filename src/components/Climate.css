@@ -1,0 +1,156 @@
+.climate-widget-btn {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  width: 135px;
+  height: 44px;
+  background: #06c00c;
+  color: white;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: 0.2s ease;
+}
+
+.climate-widget-btn:hover {
+  transform: scale(1.05);
+}
+
+.temp-label {
+  margin-left: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.climate-popup {
+  position: fixed;
+  left: 20px;
+  bottom: 70px;  /* perfect small gap above button */
+  width: 260px;  /* reduced width */
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 5px 22px rgba(0,0,0,0.25);
+  z-index: 9999;
+  overflow: hidden;
+  animation: slideIn 0.25s ease-out;
+}
+
+/* Smooth animation */
+@keyframes slideIn {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.climate-popup-header {
+  background: #06c00c;
+  color: white;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.climate-popup-body {
+  padding: 12px;
+  text-align: center;
+}
+
+.search-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 7px;
+  font-size: 13px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.search-btn {
+  padding: 7px 10px;
+  background: #06c00c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.search-btn:hover {
+  background: #05a50b;
+}
+
+
+/* Reduce spacing so crops appear higher */
+.weather-box {
+  margin-top: 8px;
+  background: #f4fff4;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #d4f5d4;
+  text-align: left;
+}
+
+/* Move crops section upward */
+.weather-box hr {
+  margin: 8px 0;
+}
+
+/* Crops heading spacing */
+.weather-box h4 {
+  margin-top: 5px;       /* moved upward */
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Crop list alignment & spacing */
+.crop-list {
+  margin: 0;             /* no extra top margin */
+  padding-left: 16px;
+}
+
+.crop-list li {
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.loading {
+  color: #555;
+  font-size: 13px;
+}
+
+@media (max-width: 480px) {
+  .climate-popup {
+    width: 90%;
+    left: 5%;
+    bottom: 70px;
+  }
+
+  .climate-widget-btn {
+    width: 125px;
+  }
+}
