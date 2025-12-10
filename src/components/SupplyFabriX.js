@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/SupplyFabriX.css';
 import supplyImage from '../images/SupplyFabriX.jpg';
+import ricebagsVideo from "../images/ricebags.mp4";
+
 import { useLang } from "../components/LangContext";
 import WhatsAppChatWidget from "./WhatsAppChatWidget";
 import Climate from "./Climate";
@@ -26,13 +28,12 @@ const SupplyFabriX = () => {
         <section className="sup-section">
             <div className="sup-container">
 
-                {/* HERO SECTION */}
 <div className="sup-hero">
 
     {/* Background Video */}
     <video
         className="sup-video"
-        src={require("../images/ricebags.mp4")}
+        src={ricebagsVideo}
         autoPlay
         loop
         muted

@@ -11,9 +11,14 @@ import {
 
 import "../styles/HomePage.css";
 
-import cropimage from "../images/HomeSol.jpg";
-import mission from "../images/Vision.jpg";
-import cropimage2 from "../images/HomeTech.jpg";
+import cropimage from "../images/HomeSol.png";
+import mission from "../images/Vision.png";
+import cropimage2 from "../images/HomeTech.png";
+
+import inputs from "../images/inputs.png";
+import orders from "../images/orders.png";
+import consultancy from "../images/consultancy.png";
+import supplychain from "../images/supplychain.png";
 
 import { useLang } from "../components/LangContext";
 import WhatsAppChatWidget from "./WhatsAppChatWidget";
@@ -50,7 +55,7 @@ useEffect(() => {
 }, []);
 
 
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(1);
   const [zoomOut, setZoomOut] = useState(false);
 
 
@@ -206,54 +211,69 @@ useEffect(() => {
     <div className="homepage">
 
       {/* ================= HERO CAROUSEL ================= */}
-      <section className="hero-carousel " id="home">
+<section className="hero-carousel" id="home">
 
-        {/* Left arrow */}
-        {/* <button
-          className="arrow left"
-          onClick={prevSlide}
-          aria-label="Previous Slide"
-        >
-          <IoIosArrowBack />
-        </button> */}
+  {/* Slide */}
+  <div className="hero-slide" key={currentSlide}>
 
-        {/* Slide content */}
-        <div className="hero-slide" key={currentSlide}>
+    {/* Fullscreen image */}
+    <img
+      src={slides[currentSlide].image}
+      alt={t("home_image_alt_crop")}
+      className="hero-carousel-image"
+    />
 
-          {/* Fullscreen image */}
-          <img
-            src={slides[currentSlide].image}
-            alt={t("home_image_alt_crop")}
-            className="hero-carousel-image"
-          />
+    {/* REMOVED overlay */}
 
-          {/* Dark overlay */}
-          <div className="hero-overlay"></div>
+    {/* Text on image with shadow */}
+   <div
+  className={`hero-text-overlay no-overlay-text 
+    ${currentSlide === 0 ? "first-slide-spacing" : ""}
+    ${currentSlide === 1 ? "text-right-slide black-text" : ""}
+  `}
+>
+  <h1>{slides[currentSlide].title}</h1>
+  <p>{slides[currentSlide].description}</p>
 
-          {/* Text on top */}
-          <div className="hero-text-overlay">
-            <h1>{slides[currentSlide].title}</h1>
-            <p>{slides[currentSlide].description}</p>
+  <a href={slides[currentSlide].link} className="learn-more">
+    {t("home_button_learn_more")}
+  </a>
+</div>
 
-            <a
-              href={slides[currentSlide].link}
-              className="learn-more"
-            >
-              {t("home_button_learn_more")}
-            </a>
-          </div>
-        </div>
 
-        {/* Right arrow */}
-        {/* <button
-          className="arrow right"
-          onClick={nextSlide}
-          aria-label="Next Slide"
-        >
-          <IoIosArrowForward />
-        </button> */}
 
-      </section>
+  </div>
+
+</section>
+
+
+
+<section class="highlights">
+  
+  <div class="highlight ai">
+    <div class="highlight-text">
+      <h1>AI-Powered Insights</h1>
+      <p>Optimizing supply chain with real-time data.</p>
+    </div>
+  </div>
+
+  <div class="highlight finance">
+    <div class="highlight-text">
+      <h1>Financial Access</h1>
+      <p>BNPL, invoice financing, and agrifabrix loans.</p>
+    </div>
+  </div>
+
+  <div class="highlight blockchain">
+    <div class="highlight-text">
+      <h1>Blockchain Traceability</h1>
+      <p>Ensuring transparency and fraud prevention.</p>
+    </div>
+  </div>
+
+</section>
+
+
 <div className="section-border top-border"></div>
 
 <section className="vision-mission new-layout paint-section">
@@ -278,65 +298,68 @@ useEffect(() => {
       <WhatsAppChatWidget />
       <Climate />
 
-<section className="highlights">
-  <div className="highlight ai">
-    <div className="highlight-overlay"><h1>AI-Powered Insights</h1>
-Optimizing supply chain with real-time data.</div>
-  </div>
 
-  <div className="highlight finance">
-    <div className="highlight-overlay"><h1>Financial Access
-</h1>BNPL, invoice financing, and agrifabrix loans.</div>
-  </div>
-
-  <div className="highlight blockchain">
-    <div className="highlight-overlay"><h1>Blockchain Traceability
-</h1>Ensuring transparency and fraud prevention</div>
-  </div>
-</section>
 
 
       {/* ================= SERVICES ================= */}
       <section className="services" id="solutions">
-        <h2>{t("home_offerings_heading")}</h2>
+        {/* <h2>{t("home_offerings_heading")}</h2> */}
 
         <div className="solutions-layout">
+<div className="service-grid">
 
-          <div className="service-grid">
+  <div className="service-card">
+    <img src={inputs} alt="Inputs" className="service-img" />
 
-            <div className="service-card">
-              <h3>
-                <FaSeedling className="service-icon" />{" "}
-                {t("home_offering_inputs_title")}
-              </h3>
-              <p>{t("home_offering_inputs_desc")}</p>
-            </div>
+    <div className="service-text-block">
+      <h3>
+        <FaSeedling className="service-icon" /> {t("home_offering_inputs_title")}
+      </h3>
+      <p>{t("home_offering_inputs_desc")}</p>
+    </div>
+  </div>
 
-            <div className="service-card">
-              <h3>
-                <FaShoppingCart className="service-icon" />{" "}
-                {t("home_offering_ordering_title")}
-              </h3>
-              <p>{t("home_offering_ordering_desc")}</p>
-            </div>
+  <div className="service-card">
+    <img src={orders} alt="Orders" className="service-img" />
 
-            <div className="service-card">
-              <h3>
-                <FaHandshake className="service-icon" />{" "}
-                {t("home_offering_consultancy_title")}
-              </h3>
-              <p>{t("home_offering_consultancy_desc")}</p>
-            </div>
+    <div className="service-text-block">
+      <h3>
+        <FaShoppingCart className="service-icon" /> {t("home_offering_ordering_title")}
+      </h3>
+      <p>{t("home_offering_ordering_desc")}</p>
+    </div>
+  </div>
 
-            <div className="service-card">
-              <h3>
-                <FaTruck className="service-icon" />{" "}
-                {t("home_offering_supply_title")}
-              </h3>
-              <p>{t("home_offering_supply_desc")}</p>
-            </div>
+  <div className="service-card">
+    <img src={consultancy} alt="Consultancy" className="service-img" />
 
-          </div>
+    <div className="service-text-block">
+      <h3>
+        <FaHandshake className="service-icon" /> {t("home_offering_consultancy_title")}
+      </h3>
+      <p>{t("home_offering_consultancy_desc")}</p>
+    </div>
+  </div>
+
+  <div className="service-card">
+    <img src={supplychain} alt="Supply Chain" className="service-img" />
+
+    <div className="service-text-block">
+      <h3>
+        <FaTruck className="service-icon" /> {t("home_offering_supply_title")}
+      </h3>
+      <p>{t("home_offering_supply_desc")}</p>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
                 <section className="partners-logos">
         <h2 className="partners-title">{t("partner_network_heading")}</h2>
         <p className="partners-subtitle">{t("partner_network_subtitle")}</p>
@@ -444,31 +467,26 @@ Optimizing supply chain with real-time data.</div>
         </div>
       </section>
 <section className="contact-details-container">
-  <h2 className="contact-heading">{t("contact_details_heading")}</h2>
 
-  <p className="contact-address">
-    T-Hub, Phase 2, Plot No 1/C, Sy No 83/1, Raidurgam, Knowledge City Rd,
-    Panmaktha, Serilingampalle, Hyderabad, Telangana 500081.
-  </p>
+  <div className="contact-bg-overlay">
+    <h2 className="contact-heading">{t("contact_details_heading")}</h2>
 
-  <div className="map-container">
-    <a href="https://maps.app.goo.gl/UrnjYHPiZbgrmA7M9" target="_blank" rel="noopener noreferrer">
-      <img 
-        src={capital} 
-        alt={t("contact_image_alt_location")} 
-        className="contact-map-img"
-      />
-    </a>
+    <p className="contact-address">
+      T-Hub, Phase 2, Plot No 1/C, Sy No 83/1, Raidurgam, Knowledge City Rd,
+      Panmaktha, Serilingampalle, Hyderabad, Telangana 500081.
+    </p>
+
+    <div className="contact-social-icons">
+      <a href="https://x.com/YOUR_TWITTER"><FaXTwitter /></a>
+      <a href="https://www.facebook.com/profile.php?id=61575820740960"><FaFacebookF /></a>
+      <a href="https://in.linkedin.com/company/agrifabrix"><FaLinkedin /></a>
+      <a href="https://instagram.com/YOUR_INSTAGRAM"><FaInstagram /></a>
+      <a href="https://wa.me/7075483505"><FaWhatsapp /></a>
+    </div>
   </div>
 
-  <div className="contact-social-icons">
-    <a href="https://x.com/YOUR_TWITTER" target="_blank" aria-label="Twitter" rel="noopener noreferrer"><FaXTwitter /></a>
-    <a href="https://www.facebook.com/profile.php?id=61575820740960" target="_blank" aria-label="Facebook" rel="noopener noreferrer"><FaFacebookF /></a>
-    <a href="https://in.linkedin.com/company/agrifabrix" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer"><FaLinkedin /></a>
-    <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank" aria-label="Instagram" rel="noopener noreferrer"><FaInstagram /></a>
-    <a href="https://wa.me/7075483505" target="_blank" aria-label="WhatsApp"  rel="noopener noreferrer"><FaWhatsapp /></a>
-  </div>
 </section>
+
 {showPopupForm && (
   <div className="popup-overlay">
     <div className="popup-form-container">

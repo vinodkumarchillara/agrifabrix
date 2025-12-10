@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import "../styles/TradeFabriX.css";
 import tradeImage from "../images/TradeFabriX.jpg";
+import marketLinkVideo from "../images/marketlink.mp4";
+
 import { useLang } from "../components/LangContext";
 import WhatsAppChatWidget from "./WhatsAppChatWidget";
 import Climate from "./Climate";
@@ -61,7 +63,7 @@ const TradeFabriX = () => {
         muted
         playsInline
     >
-        <source src={require("../images/marketlink.mp4")} type="video/mp4" />
+        <source src={marketLinkVideo} type="video/mp4" />
     </video>
 
     {/* Dark Overlay */}

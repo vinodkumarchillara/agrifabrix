@@ -6,6 +6,7 @@ import { FaMoneyCheckAlt, FaShoppingCart, FaFileInvoiceDollar } from "react-icon
 import { useLang } from "../components/LangContext";
 import WhatsAppChatWidget from "./WhatsAppChatWidget";
 import Climate from "./Climate";
+import farmerLoanVideo from "../images/farmer_loan.mp4";
 
 const CreditFabriX = () => {
   const { t } = useLang();
@@ -15,27 +16,27 @@ const CreditFabriX = () => {
       <div className="cred-container">
 
         {/* ================= HERO VIDEO ================= */}
-        <div className="cred-hero">
+<div className="cred-hero">
 
-          <video 
-            className="cred-video"
-            autoPlay
-            loop
-            muted
-            playsInline
-          >
-            <source src={require("../images/farmer_loan.mp4")} type="video/mp4" />
-          </video>
+  <video 
+    className="cred-video"
+    autoPlay
+    loop
+    muted
+    playsInline
+  >
+    <source src={farmerLoanVideo} type="video/mp4" />
+  </video>
 
-          <div className="cred-overlay"></div>
+  <div className="cred-overlay"></div>
 
-          <div className="cred-hero-text">
-            <h2><strong>{t("credit_hero_title")}</strong></h2>
-            <h3>{t("credit_hero_subtitle")}</h3>
-            <p>{t("credit_hero_desc")}</p>
-          </div>
+  <div className="cred-hero-text">
+    <h2><strong>{t("credit_hero_title")}</strong></h2>
+    <h3>{t("credit_hero_subtitle")}</h3>
+    <p>{t("credit_hero_desc")}</p>
+  </div>
 
-        </div>
+</div>
 
         {/* ================= INTRO ================= */}
         <div className="cred-content leaf-decor"></div>
