@@ -27,13 +27,11 @@
 .sup-hero {
   position: relative;
   width: 100%;
-  height: 520px; /* Adjustable */
+  height: 520px;
   margin-bottom: 50px;
-  /* border-radius: 0 0 80% 80% / 20% 20% 10% 10%; */
   overflow: hidden;
 }
 
-/* Video Background */
 .sup-video {
   width: 100%;
   height: 100%;
@@ -41,10 +39,8 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  border-radius: inherit;
 }
 
-/* Dark Overlay */
 .sup-video-overlay {
   position: absolute;
   inset: 0;
@@ -53,18 +49,15 @@
     rgba(0,0,0,0.65)
   );
   z-index: 1;
-  border-radius: inherit;
 }
 
-/* Hero Text */
 .sup-video-text {
-  position: relative;
+  position: absolute;
+  left: 50px;
+  bottom: 40px;
   z-index: 3;
-  color: #ffffff !important;
   max-width: 650px;
-  margin-left: 50px;
-  bottom: 0px;
-  margin-top: 30px;
+  color: #fff;
 }
 
 .sup-video-text h2 {
@@ -72,22 +65,20 @@
   font-weight: 700;
   margin-bottom: 10px;
   font-family: "Poppins", sans-serif;
-  color: #ffffff !important;
 }
 
 .sup-video-text h3 {
   font-size: 2rem;
   margin-bottom: 12px;
-  color: #f1f1f1 !important;
+  color: #f1f1f1;
 }
 
 .sup-video-text p {
   font-size: 1.3rem;
   line-height: 1.7;
-  color: #ffffff !important;
 }
 
-/* Optional decorative leaves */
+/* Decorative leaves */
 .sup-hero::before,
 .sup-hero::after {
   content: "";
@@ -126,7 +117,6 @@
   margin-bottom: 2rem;
 }
 
-/* Leaf Decor Wrapper */
 .sup-leaf-decor {
   position: relative;
   padding: 40px 0;
@@ -138,7 +128,6 @@
   position: absolute;
   background: url('../images/leaf.png') no-repeat center/contain;
   opacity: 0.5;
-  z-index: 1;
 }
 
 .sup-leaf-decor::before {
@@ -164,7 +153,6 @@
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
   z-index: 2;
-  position: relative;
 }
 
 .sup-card {
@@ -182,14 +170,13 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Watermark */
 .sup-card::before {
   content: "";
   position: absolute;
   inset: 0;
   background-image: url("../images/logo1.jpg");
-  background-position: center;
   background-size: 120px;
+  background-position: center;
   opacity: 0;
   transition: 0.3s ease;
 }
@@ -209,8 +196,8 @@
 .sup-title-item {
   color: #2e7d32;
   font-size: 1.2rem;
-  margin-bottom: 10px;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .sup-body-item {
@@ -237,8 +224,8 @@
   font-size: 1rem;
   cursor: pointer;
   transition: 0.3s ease;
-  width: 100%;
   max-width: 300px;
+  width: 100%;
 }
 
 .sup-button:hover {
@@ -250,6 +237,20 @@
 /*                     RESPONSIVE                        */
 /* ===================================================== */
 
+/* Tablets */
+@media (max-width: 1024px) {
+  .sup-video-text h2 {
+    font-size: 3rem;
+  }
+  .sup-video-text h3 {
+    font-size: 1.5rem;
+  }
+  .sup-video-text p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Small Tablets & Large Phones */
 @media (max-width: 768px) {
   .sup-hero {
     height: 350px;
@@ -257,11 +258,16 @@
 
   .sup-video-text {
     left: 20px;
-    bottom: 30px;
+    bottom: 20px;
+    max-width: 90%;
   }
 
   .sup-video-text h2 {
     font-size: 2rem;
+  }
+
+  .sup-video-text p {
+    font-size: 1rem;
   }
 
   .sup-card-grid {
@@ -274,14 +280,14 @@
   }
 }
 
+/* Mobiles */
 @media (max-width: 480px) {
-
   .sup-hero {
     height: 300px;
   }
 
   .sup-video-text h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   .sup-video-text h3 {

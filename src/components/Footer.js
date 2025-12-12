@@ -3,6 +3,7 @@ import "../styles/Footer.css";
 import logo from "../images/l.png";
 import { FaFacebook, FaLinkedin, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
 import { useLang } from "../components/LangContext"; // 👈 Import the custom hook
 
 const Footer = () => {
@@ -62,11 +63,12 @@ const Footer = () => {
           />
           <div className="footer-social-icons">
             <div className="social-icons">
-              <a href="https://in.linkedin.com/company/agrifabrix" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="X"><FaXTwitter /></a>
-              <a href="https://www.facebook.com/profile.php?id=61575820740960" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook /></a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube /></a>
-              <a href="https://wa.me/7075483505" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><FaWhatsapp /></a>
+              <a href="https://www.linkedin.com/company/agrifabrix/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
+              {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="X"><FaXTwitter /></a> */}
+              <a href="https://www.instagram.com/agrifabrix_123/" target="_blank" rel="noopener noreferrer" aria-label="X"><FaInstagram /></a>
+              <a href="https://www.facebook.com/people/Samruddhi-Eco-Agrifabrix/61572279958575/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook /></a>
+              <a href="https://youtube.com/@samruddhiecoagrifabrix?si=0ODm3aDBH7niGv4e" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube /></a>
+              <a href={`https://wa.me/${7075483505}`}target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><FaWhatsapp /></a>
             </div>
           </div>
           {/* Note: The address itself is considered static/non-translatable data */}

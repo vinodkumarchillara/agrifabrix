@@ -1,16 +1,15 @@
 .terms-container {
   max-width: 900px;
-  /* margin: 60px auto; */
   background: white;
-padding:100px 20px 50px; 
- margin-left: 230px;
+  padding: 100px 20px 50px;
+  margin-left: 230px;
   margin-bottom: 20px;
   color: #333;
   line-height: 1.6;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   font-family: Arial, sans-serif;
-  animation: fadeIn 1s ease; /* Fade-in animation */
+  animation: fadeIn 1s ease;
 }
 
 .terms-heading {
@@ -35,10 +34,12 @@ padding:100px 20px 50px;
   padding-left: 20px;
 }
 
-/* Tablet Version */
+/* ==============================
+       TABLET RESPONSIVE
+================================ */
 @media (max-width: 1024px) {
   .terms-container {
-    margin: 30px 20px;
+    margin: 20px;
     padding: 25px;
   }
 
@@ -49,12 +50,18 @@ padding:100px 20px 50px;
   .terms-subheading {
     font-size: 1.3rem;
   }
+
+  .terms-paragraph,
+  .terms-list {
+    font-size: 0.95rem;
+  }
 }
 
-/* Mobile Version */
-@media (max-width: 1024px) {
+/* ==============================
+       MOBILE RESPONSIVE
+================================ */
+@media (max-width: 600px) {
   .terms-container {
-    margin: 20px;
     padding: 20px;
   }
 
@@ -63,11 +70,11 @@ padding:100px 20px 50px;
   }
 
   .terms-subheading {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .terms-paragraph,
   .terms-list {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 }

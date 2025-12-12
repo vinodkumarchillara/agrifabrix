@@ -10,6 +10,7 @@ import {
 
 import "../styles/Solutions.css";
 import BackgroundImage from "../images/Solutions.jpg";
+import solutionsVideo from "../images/solutionsVideo.mp4"
 
 import { useLang } from "../components/LangContext";
 import WhatsAppChatWidget from "./WhatsAppChatWidget";
@@ -36,10 +37,13 @@ const Solutions = () => {
 
       {/* ================= HERO SECTION ================= */}
       <div className="sol-hero-banner">
-        <img
-          src={BackgroundImage}
-          alt={t("solutions_image_alt")}
+        <video
+          src={solutionsVideo}
           className="sol-hero-image"
+          autoPlay 
+          loop 
+          muted 
+          playsInline
         />
 
         <div className="sol-hero-overlay"></div>

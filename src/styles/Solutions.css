@@ -13,7 +13,7 @@ body {
 }
 
 /* ======================== */
-/*     HERO FULLSCREEN      */
+/*        HERO SECTION      */
 /* ======================== */
 
 .sol-section {
@@ -23,7 +23,6 @@ body {
   overflow: hidden;
 }
 
-/* HERO BANNER */
 .sol-hero-banner {
   position: relative;
   width: 100%;
@@ -37,7 +36,6 @@ body {
   object-fit: cover;
 }
 
-/* Dark Overlay */
 .sol-hero-overlay {
   position: absolute;
   inset: 0;
@@ -48,18 +46,17 @@ body {
   z-index: 1;
 }
 
-/* HERO TEXT */
 .sol-hero-text {
   position: absolute;
-  bottom: 40px;
+  bottom: 50px;
   left: 60px;
   z-index: 2;
   color: white;
-  max-width: 600px;
+  max-width: 580px;
 }
 
 .sol-hero-text h2 {
-  font-size: 4rem;
+  font-size: 3.6rem;
   font-weight: 700;
   margin-bottom: 12px;
 }
@@ -71,7 +68,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Hero Button */
 .sol-hero-btn {
   background: #4CAF50;
   color: #fff;
@@ -117,7 +113,6 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.12);
   position: relative;
   transition: 0.35s ease;
-  min-width: 220px;
   overflow: hidden;
 }
 
@@ -126,24 +121,23 @@ body {
   box-shadow: 0 10px 25px rgba(166,243,168,0.45);
 }
 
-/* Watermark */
 .sol-challenge-card::before {
   content: "";
   position: absolute;
   inset: 0;
   background-image: url("../images/logo1.jpg");
-  background-size: 130px;
+  background-size: 120px;
   background-position: center;
   opacity: 0;
   transition: opacity 0.3s;
 }
 
 .sol-challenge-card:hover::before {
-  opacity: 0.12;
+  opacity: 0.13;
 }
 
 /* ======================== */
-/*     UNEVEN GRID LAYOUT   */
+/*   UNEVEN GRID LAYOUT     */
 /* ======================== */
 
 .sol-uneven-grid {
@@ -155,12 +149,13 @@ body {
   margin: 50px auto;
 }
 
-/* Base Card */
+/* Cards */
 .sol-ug-card {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  /* border-radius: 12px; */
+  height: 100%;
+  min-height: 300px;
 }
 
 .sol-ug-card img {
@@ -174,14 +169,14 @@ body {
   transform: scale(1.08);
 }
 
-/* Overlay */
+/* Overlays */
 .sol-ug-card::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    rgba(0,0,0,0.25),
-    rgba(0,0,0,0.65)
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0.55)
   );
   z-index: 1;
   transition: 0.35s ease;
@@ -189,12 +184,12 @@ body {
 
 .sol-ug-card:hover::after {
   background: linear-gradient(
-    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.4),
     rgba(0,0,0,0.85)
   );
 }
 
-/* Text inside card */
+/* Inner Text */
 .sol-ug-text {
   position: absolute;
   bottom: 0;
@@ -214,7 +209,6 @@ body {
   opacity: 0.9;
 }
 
-/* Buttons inside grid */
 .sol-ug-btn {
   margin-top: 12px;
   background: #4CAF50;
@@ -239,38 +233,43 @@ body {
 }
 
 /* ======================== */
-/*   GRID HEIGHT RULES      */
+/*  GRID HEIGHT RULES       */
 /* ======================== */
 
-.sol-big-wide {
-  height: 330px;
-  grid-column: span 2;
-}
-
-.sol-big-tall {
-  height: 330px;
-}
-
-.sol-medium-wide {
-  height: 300px;
-}
-
-.sol-small-card {
-  height: 300px;
-}
-
-.sol-medium-tall {
-  height: 300px;
-}
+.sol-big-wide     { min-height: 330px; grid-column: span 2; }
+.sol-big-tall     { min-height: 330px; }
+.sol-medium-wide  { min-height: 300px; }
+.sol-small-card   { min-height: 300px; }
+.sol-medium-tall  { min-height: 300px; }
 
 /* ======================== */
-/*       RESPONSIVE         */
+/*       RESPONSIVE FIXES   */
 /* ======================== */
 
+/* TABLETS (1024px) */
+@media (max-width: 1024px) {
+  .sol-uneven-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sol-big-wide {
+    grid-column: span 2;
+  }
+
+  .sol-hero-text h2 {
+    font-size: 2.6rem;
+  }
+}
+
+/* MOBILE (768px) */
 @media (max-width: 768px) {
 
+  .sol-hero-banner {
+    height: 65vh;
+  }
+
   .sol-hero-text {
-    bottom: 40px;
+    bottom: 30px;
     left: 20px;
     max-width: 90%;
   }
@@ -291,17 +290,18 @@ body {
     grid-template-columns: 1fr;
   }
 
+  /* All cards same height on mobile */
   .sol-big-wide,
   .sol-big-tall,
   .sol-medium-wide,
   .sol-small-card,
   .sol-medium-tall {
     grid-column: span 1 !important;
-    height: 260px;
+    min-height: 240px;
   }
 }
 
-/* Fade Animation */
+/* Animation */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(18px); }
   to { opacity: 1; transform: translateY(0); }

@@ -1,32 +1,33 @@
-/* Footer Container */
+/* ===================================================== */
+/* ===============      GLOBAL RESET     =============== */
+/* ===================================================== */
 * {
   box-sizing: border-box;
 }
 
-/* body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-} */
 .footer {
-  background-color:black;
+  background-color: black;
   padding: 50px 30px 20px;
   font-family: 'Arial', sans-serif;
-  color: #333;
   border-top: 5px solid #1c5839;
+  color: white;
 }
 
-/* Layout Container */
+/* ===================================================== */
+/* ===============     MAIN FOOTER GRID   ============== */
+/* ===================================================== */
 .footer-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 30px;
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Logo Section */
+/* ===================================================== */
+/* ===============     LOGO + DESCRIPTION  ============= */
+/* ===================================================== */
 .footer-logo-section {
   flex: 1;
   min-width: 250px;
@@ -35,42 +36,35 @@
   align-items: flex-start;
 }
 
-/* .footer-logo {
-  width: 150px;
-  margin-bottom: 15px;
-} */
-
 .footer-logo {
   width: 172px;
-  height: auto;  /* or whatever height you prefer */
-  margin-bottom: 0px;
+  height: auto;
+  margin-bottom: 10px;
 }
-
 
 .company-desc {
   font-size: 14px;
   margin-bottom: 10px;
   color: white;
+  line-height: 1.6;
 }
 
-/* Social Media Icons */
+/* ===================================================== */
+/* ===============   SOCIAL MEDIA ICONS   =============== */
+/* ===================================================== */
 .footer-social-icons {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-  font-size: 22px;
-  margin-top: 9px;
   gap: 15px;
+  margin-top: 8px;
 }
 
 .footer-social-icons a {
+  width: 40px;
+  height: 40px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  color: inherit;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -79,7 +73,7 @@
   opacity: 0.8;
 }
 
-/* Social Brand Colors */
+/* Brand Colors */
 .footer-social-icons a[aria-label="X"] { color: white; }
 .footer-social-icons a[aria-label="Facebook"] { color: #1877F2; }
 .footer-social-icons a[aria-label="LinkedIn"] { color: #0077B5; }
@@ -87,14 +81,16 @@
 .footer-social-icons a[aria-label="WhatsApp"] { color: #25D366; }
 .footer-social-icons a[aria-label="YouTube"] { color: #FF0000; }
 
-/* Navigation Sections */
+/* ===================================================== */
+/* ===============     FOOTER NAV LINKS   =============== */
+/* ===================================================== */
 .footer-sections {
-  display: flex;
   flex: 2;
+  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 30px;
   min-width: 250px;
+  gap: 30px;
 }
 
 .footer-nav {
@@ -122,14 +118,16 @@
   color: white;
   text-decoration: none;
   font-size: 14px;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .footer-nav ul li a:hover {
-  color:lightgreen;
+  color: lightgreen;
 }
 
-/* Newsletter Subscription */
+/* ===================================================== */
+/* ===============     NEWSLETTER AREA    =============== */
+/* ===================================================== */
 .footer-subscribe-wrapper {
   width: 100%;
   display: flex;
@@ -138,14 +136,14 @@
 }
 
 .footer-subscribe {
-  text-align: center;
-  max-width: 400px;
+  max-width: 380px;
   width: 100%;
+  text-align: center;
 }
 
 .footer-subscribe h2 {
   font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   color: #fff;
 }
 
@@ -159,21 +157,19 @@
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  align-items: center;
 }
 
 .subscribe-form input[type="email"] {
-  width: 90%;
-  padding: 0.4rem 0.8rem;
+  width: 100%;
+  padding: 0.45rem 0.8rem;
   border-radius: 4px;
   border: none;
   font-size: 0.95rem;
-  outline: none;
 }
 
 .subscribe-form button {
-  width: 90%;
-  padding: 0.4rem 0.8rem;
+  width: 100%;
+  padding: 0.45rem 0.8rem;
   background-color: #00b894;
   color: white;
   border: none;
@@ -181,36 +177,35 @@
   font-weight: bold;
   font-size: 0.95rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .subscribe-form button:hover {
   background-color: #019875;
 }
 
-/* Bottom Footer */
+/* ===================================================== */
+/* ===============  COPYRIGHT BOTTOM AREA ============== */
+/* ===================================================== */
 .footer-bottom {
-  text-align: center;
   margin-top: 40px;
+  text-align: center;
   padding-top: 20px;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #333;
   font-size: 13px;
-  color: #888;
+  color: #bbb;
 }
 
-/* Responsive Layout */
+/* ===================================================== */
+/* ===============     RESPONSIVE BREAKPOINTS ========== */
+/* ===================================================== */
+
+/* -------- TABLET -------- */
 @media (max-width: 1024px) {
   .footer-content {
     flex-direction: column;
-    align-items: center;
     text-align: center;
-  }
-
-  .footer-logo-section,
-  .footer-nav {
-    width: 100%;
-    max-width: 300px;
-    align-items: center;
+    gap: 50px;
   }
 
   .footer-logo-section {
@@ -224,16 +219,56 @@
   .footer-sections {
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    margin-top: 20px;
+    text-align: center;
+  }
+
+  .footer-nav {
+    max-width: 300px;
   }
 
   .footer-subscribe-wrapper {
     margin-top: 2rem;
   }
+}
 
-  .subscribe-form input[type="email"],
-  .subscribe-form button {
-    width: 100%;
+/* -------- MOBILE -------- */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .footer-nav h2 {
+    font-size: 17px;
+  }
+
+  .footer-nav ul li a {
+    font-size: 13.5px;
+  }
+
+  .footer-logo {
+    width: 150px;
+  }
+}
+
+/* -------- SMALL MOBILE -------- */
+@media (max-width: 480px) {
+  .footer {
+    padding: 35px 15px;
+  }
+
+  .footer-logo {
+    width: 140px;
+  }
+
+  .footer-nav {
+    min-width: 100%;
+  }
+
+  .footer-nav ul li a {
+    font-size: 13px;
+  }
+
+  .footer-subscribe h2 {
+    font-size: 1.1rem;
   }
 }

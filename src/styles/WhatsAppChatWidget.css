@@ -1,59 +1,56 @@
-/* src/components/WhatsAppChatWidget.css */
+/* ============================
+   WhatsApp Floating Button
+============================= */
 
 .whatsapp-fab {
   position: fixed;
   bottom: 25px;
   right: 25px;
   z-index: 1000;
-  
-  
-  /* Styling for the pill shape */
+
   background-color: #03cc0b;
   color: white;
-  /* Adjust width to be auto and use padding instead of fixed height/width */
-  width: auto; 
-  padding: 10px 20px; /* Vertical and horizontal padding */
-  border-radius: 50px; /* More aggressive border-radius for pill shape */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  
-  /* Centering icon and text */
+
+  /* Pill styling */
+  padding: 10px 22px;
+  border-radius: 50px;
+  width: auto;
+
+  /* Flex for icon + text */
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 8px; /* Space between icon and text */
-  
-  /* Link Behavior */
+  gap: 8px;
+
+  /* Font */
   cursor: pointer;
   text-decoration: none;
-  font-size: 11px; /* Adjust font size for the text */
-  font-weight: bold; /* Make the text bold */
+  font-size: 12px;
+  font-weight: 800;
 
-  /* Animation */
+  /* Shadow + transition */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: transform 0.3s ease;
 }
 
 .whatsapp-fab:hover {
-  /* transform: scale(1.05); Slightly less aggressive hover scale for wider button */
-  transform: translateY(4px); /* Moves the button 4px down */
+  transform: translateY(4px);
 }
 
+/* Icon */
 .whatsapp-icon {
-  font-size: 24px; /* Slightly smaller icon size to fit with text */
+  font-size: 22px;
 }
 
+/* Text */
 .button-text {
-  /* No specific styles needed here, inherits from .whatsapp-fab */
-  white-space: nowrap; /* Ensures text stays on one line */
-  font-weight: 800;
-  font-size: 12px;
-  
+  white-space: nowrap;
 }
 
-
+/* Notification Bubble */
 .notification-dot {
   position: absolute;
-  top: -5px; /* Adjust position relative to the new button shape */
-  right: -5px; /* Adjust position relative to the new button shape */
+  top: -6px;
+  right: -6px;
   width: 20px;
   height: 20px;
   background-color: red;
@@ -61,7 +58,50 @@
   border-radius: 50%;
   font-size: 12px;
   font-weight: bold;
+
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* ============================
+      RESPONSIVE BEHAVIOR
+============================= */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .whatsapp-fab {
+    padding: 8px 18px;
+    font-size: 11px;
+    right: 18px;
+    bottom: 20px;
+  }
+
+  .whatsapp-icon {
+    font-size: 20px;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .whatsapp-fab {
+    padding: 6px 15px;
+    font-size: 10px;
+    gap: 6px;
+    right: 15px;
+    bottom: 18px;
+  }
+
+  .whatsapp-icon {
+    font-size: 18px;
+  }
+
+  /* If needed, shrink notification bubble slightly */
+  .notification-dot {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    top: -4px;
+    right: -4px;
+  }
 }

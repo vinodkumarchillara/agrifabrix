@@ -1,17 +1,20 @@
-/* Apply Arial font to the entire body */
+/* ===========================
+   GLOBAL
+   =========================== */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  /* padding: 0; */
   color: #333;
-  background-color:white; /* Optional: gives a light background for contrast */
+  background-color: white;
 }
 
+/* ===========================
+   SHIPPING POLICY CONTAINER
+   =========================== */
 .shipping-policy-container {
   max-width: 800px;
-  padding:100px 40px 40px 40px; 
-  margin-left: 250px;
-  margin-bottom: 20px;
+  margin: 80px auto 20px; /* centered layout */
+  padding: 80px 40px 40px;
   background: #ffffff;
 
   border-radius: 10px;
@@ -19,6 +22,9 @@ body {
   line-height: 1.6;
 }
 
+/* ===========================
+   HEADINGS & TEXT
+   =========================== */
 .policy-title {
   text-align: center;
   font-size: 2rem;
@@ -31,7 +37,7 @@ body {
 }
 
 .section-heading {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: bold;
   color: #008c70;
   margin-bottom: 10px;
@@ -50,15 +56,35 @@ body {
   margin-bottom: 6px;
 }
 
-/* Responsive adjustments */
+/* ===========================
+   RESPONSIVE — TABLETS (≤1024px)
+   =========================== */
 @media (max-width: 1024px) {
   .shipping-policy-container {
-    padding: 25px 20px;
-    margin: 20px;
+    margin: 40px 20px;
+    padding: 40px 25px;
   }
 
   .policy-title {
     font-size: 1.8rem;
+  }
+
+  .section-heading {
+    font-size: 1.15rem;
+  }
+}
+
+/* ===========================
+   RESPONSIVE — MOBILE (≤768px)
+   =========================== */
+@media (max-width: 768px) {
+  .shipping-policy-container {
+    margin: 25px 15px;
+    padding: 28px 20px;
+  }
+
+  .policy-title {
+    font-size: 1.6rem;
   }
 
   .section-heading {
@@ -68,5 +94,18 @@ body {
   .policy-section p,
   .policy-section li {
     font-size: 0.95rem;
+  }
+}
+
+/* ===========================
+   SMALL MOBILE (≤480px)
+   =========================== */
+@media (max-width: 480px) {
+  .shipping-policy-container {
+    padding: 22px 16px;
+  }
+
+  .policy-title {
+    font-size: 1.4rem;
   }
 }

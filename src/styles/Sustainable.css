@@ -1,101 +1,113 @@
-/* ===== Global Font & Base ===== */
-* {
-  box-sizing: border-box;
-}
-
-/* body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-} */
-
-/* ===== Sustainability Wrapper ===== */
-.sustainability {
+/* ================================
+   SUSTAINABILITY VIDEO HERO
+================================ */
+.Sustain-section {
+  position: relative;
   width: 100%;
-  padding: 65px 20px 60px;
-  background-color: #fff;
-  color: #222;
-  animation: fadeIn 1s ease;
+  height: 80vh;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
 }
 
-/* ===== Hero Section ===== */
 .Sustain-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-  max-width: 1200px;
-  margin: auto;
-  padding: 40px;
-  padding-top: 70px;
-  background-color: #D0EDC6;
-  border-radius: 10px 10px 200px 10px;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
+/* Background Video */
 .Sustain-bg {
-  width: 50%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
 }
 
-.Sustain-bg:hover {
-  transform: scale(1.05);
+/* Overlay */
+.Sustain-row::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 2;
 }
 
+/* Hero Text — Final Clean Version */
 .Sustain-content {
-  flex: 1;
-  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  text-align: center;
+  color: #fff;
+  width: 90%;
+  max-width: 900px;
 }
 
 .Sustain-content h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  color: #1c5839;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.55);
 }
 
 .Sustain-content p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  color: #444;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.55);
 }
 
-/* ===== Content Section ===== */
+/* ===== RESPONSIVE HERO ===== */
+@media (max-width: 1024px) {
+  .Sustain-section { height: 65vh; }
+  .Sustain-content h2 { font-size: 2.2rem; }
+  .Sustain-content p { font-size: 1.1rem; }
+}
+@media (max-width: 768px) {
+  .Sustain-section { height: 55vh; }
+  .Sustain-content h2 { font-size: 1.8rem; }
+  .Sustain-content p { font-size: 1rem; }
+}
+@media (max-width: 480px) {
+  .Sustain-content h2 { font-size: 1.6rem; }
+  .Sustain-content p { font-size: 0.95rem; }
+}
+
+
+/* Content Section */
 .sustainability-section {
   background: white;
   padding: 60px 0 30px;
   color: #1c5839;
+  font-family: "Poppins", sans-serif;
 }
 
 .sustainability-container {
   max-width: 1100px;
-  margin: 0 auto;
-  text-align: left;
+  margin: auto;
 }
 
 .sustainability-section h1 {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-weight: 300;
   margin-bottom: 20px;
-  color: #1c5839;
 }
 
 .sustainability-section h2 {
   font-size: 1.8rem;
   margin: 40px 0 15px;
-  font-weight: 300;
-  color: #1c5839;
 }
 
 .sustainability-section h3 {
   font-size: 1.3rem;
   margin-bottom: 10px;
-  font-weight: 300;
-  color: #1c5839;
 }
 
+/* Paragraphs */
 .sustainability-section p,
 .sustainability-section li {
   font-size: 1rem;
@@ -103,45 +115,23 @@
   line-height: 1.6;
 }
 
-/* Paragraph enhancements */
-.intro {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 20px;
-}
-
-.closing {
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: #205533;
-  margin-top: 30px;
-}
-
-/* Divider */
-hr {
-  border: none;
-  height: 1px;
-  background-color: #cfe3d8;
-  margin: 40px 0;
-}
-
-/* ===== ESG Columns ===== */
+/* ESG Columns */
 .esg-columns {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
+  flex-wrap: wrap;
   margin-top: 20px;
 }
 
 .esg-box {
-  background: #ffffff;
+  flex: 1 1 calc(33% - 20px);
+  background: #fff;
   padding: 25px;
   border-radius: 12px;
-  flex: 1 1 calc(33% - 20px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   position: relative;
   overflow: hidden;
+  transition: 0.3s ease;
 }
 
 .esg-box:hover {
@@ -151,149 +141,63 @@ hr {
 .esg-box::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/logo1.jpg"); /* Your logo path */
-  background-repeat: no-repeat;
+  inset: 0;
+  background-image: url("../images/logo1.jpg");
+  background-size: 120px;
   background-position: center;
-  background-size: 120px 120px;
+  background-repeat: no-repeat;
   opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: 0.3s;
 }
 
 .esg-box:hover::before {
   opacity: 0.18;
 }
 
-.esg-box ul {
-  padding-left: 20px;
-  list-style: disc;
-}
-
-/* ===== Game Changer List ===== */
-.game-changer-list {
-  margin-top: 20px;
-  padding-left: 20px;
-  list-style-type: square;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #444;
-}
-
-/* ===== Responsive Design ===== */
+/* RESPONSIVE ESG */
 @media (max-width: 1024px) {
-  .Sustain-row {
-    flex-direction: column;
-    text-align: center;
-    border-radius: 10px;
-    padding: 130px 20px 30px;
-  }
-
-  .Sustain-bg {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .Sustain-content {
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  .sustainability-section h1 {
-    font-size: 2rem;
-  }
-
-  .sustainability-section h2 {
-    font-size: 1.5rem;
-  }
-
   .esg-columns {
     flex-direction: column;
   }
-
   .esg-box {
     flex: 1 1 100%;
   }
 }
 
-@media (max-width: 1024px) {
-  .Sustain-row {
-    padding: 35px 20px 20px;
-    border-radius: 10px 10px 111px 10px;
-  }
 
-  .Sustain-content h2 {
-    font-size: 15px;
-    margin-top: auto;
-  }
-
-  .Sustain-content p {
-    font-size: 10px;
-  }
-
-  .intro,
-  .game-changer-list,
-  .esg-box li {
-    font-size: 1rem;
-  }
-
-  .esg-box {
-    padding: 20px;
-  }
-}
-
-/* Fade In Animation */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ===== Base Section ===== */
 .solutions-section {
   width: 100%;
-  font-family: 'Arial', sans-serif;
-  background: #fff;
-  animation: fadeIn 1s ease;
   padding-top: 95px;
   text-align: center;
+  animation: fadeIn 1s ease;
 }
 
-/* ===== Hero Row ===== */
 .solutions-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
   padding: 30px 20px;
   max-width: 1200px;
   margin: auto;
-  border-radius: 10px;
   background-color: #D0EDC6;
-  gap: 20px;
+  border-radius: 10px;
 }
 
-.solutions-image {
-  flex: 1;
-}
-
-.solutions-background-image {
+.solutions-image img {
   width: 100%;
   max-width: 400px;
-  height: auto;
   border-radius: 10px;
-  transition: transform 0.3s ease;
+  transition: 0.3s ease;
 }
 
-.solutions-background-image:hover {
-  transform: scale(1.1);
+.solutions-image img:hover {
+  transform: scale(1.07);
 }
 
 .solutions-content {
-  flex: 1;
-  padding: 10px;
   text-align: left;
+  flex: 1;
 }
 
 .solutions-content h2 {
@@ -308,185 +212,61 @@ hr {
 
 .solutions-learn-more-btn {
   background: #4CAF50;
-  color: #fff;
+  color: white;
   padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: 0.3s;
 }
 
 .solutions-learn-more-btn:hover {
-  background: lightgreen;
+  background: #3da53f;
 }
 
-/* ===== Challenges Section ===== */
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .solutions-row {
+    flex-direction: column;
+    text-align: center;
+  }
+  .solutions-content {
+    text-align: center;
+  }
+}
+
+
 .challenges-container {
   padding: 40px;
-  background-color: white;
 }
 
 .challenges-title {
   font-size: 2.5rem;
+  margin-bottom: 40px;
   font-weight: 300;
-  font-family: "Open Sans", sans-serif;
-  margin-bottom: 50px;
 }
 
 .challenge-grid {
   display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .challenge-card {
-  flex: 1;
-  min-width: 180px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  transition: transform 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.challenge-card:hover {
-  transform: translateY(-5px);
-}
-
-.challenge-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/logo1.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 120px 120px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.challenge-card:hover::before {
-  opacity: 0.18;
-}
-
-.challenge-icon {
-  font-size: 2rem;
-  color: #1e88e5;
-  margin-bottom: 10px;
-}
-
-.heading-with-icon {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.heading-with-icon .challenge-icon {
-  margin-bottom: 0;
-  font-size: 1.5rem;
-}
-
-.challenge-card h4 {
-  font-size: 1.1rem;
-  font-family: "Open Sans", sans-serif;
-  margin-bottom: 10px;
-}
-
-.challenge-card p {
-  font-size: 0.95rem;
-  color: #555;
-  font-family: "Open Sans", sans-serif;
-}
-
-/* ===== Solutions Cards Section ===== */
-.cards {
-  padding: 40px 20px;
-  background: #fff;
-  font-family: Arial, sans-serif;
-}
-
-.cards-heading {
-  font-size: 1.8rem;
-  font-weight: 300;
-  color: #222;
-  margin-bottom: 30px;
-}
-
-.cards-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 30px 0;
-}
-
-.car {
-  position: relative;
+  flex: 1 1 calc(33.3% - 20px);
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-  overflow: hidden;
-  width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: 0.3s;
+  position: relative;
 }
 
-.car:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(166, 243, 168, 0.6);
+.challenge-card:hover {
+  transform: translateY(-6px);
 }
 
-.car::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/logo1.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 120px 120px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.car:hover::before {
-  opacity: 0.2;
-}
-
-.card-title {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #205533;
-}
-
-.card-description {
-  font-size: 1rem;
-  color: #444;
-}
-
-.card-cta {
-  background: #205533;
-  color: #fff;
-  padding: 10px 25px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  margin-top: 20px;
-  display: inline-block;
-}
-
-.card-cta:hover {
-  background: #3a7d57;
+@media (max-width: 768px) {
+  .challenge-card {
+    flex: 1 1 100%;
+  }
 }

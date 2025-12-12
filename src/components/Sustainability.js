@@ -2,6 +2,7 @@
 
 import React from "react";
 import "../styles/Sustainable.css";
+import sustainabilityVideo from "../images/sustainabilityVideo.mp4";
 import sustainableBg from "../images/Susatainable.png";
 import { useLang } from "../components/LangContext"; // 👈 Import the custom hook
 import WhatsAppChatWidget from "./WhatsAppChatWidget"; // Import the WhatsApp widget
@@ -15,11 +16,15 @@ const Sustainability = () => {
       {/* Hero Section */}
       <div className="Sustain-section">
         <div className="Sustain-row">
-          <img 
-            src={sustainableBg} 
-            alt={t("sustain_hero_alt")} 
-            className="Sustain-bg" 
+          <video
+            src={sustainabilityVideo}
+            className="Sustain-bg"
+            autoPlay
+            loop
+            muted
+            playsInline
           />
+
           <div className="Sustain-content">
             <h2>{t("sustain_hero_title")}</h2>
             <p>{t("sustain_hero_desc")}</p>

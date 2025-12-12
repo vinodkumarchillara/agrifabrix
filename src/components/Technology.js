@@ -3,7 +3,7 @@
 import React from 'react';
 import '../styles/Technology.css';
 import { FaRobot, FaDatabase, FaGlobe, FaLeaf, FaLock, FaChartLine } from 'react-icons/fa';
-import techBg from '../images/Technology.jpg';
+import TechnologyVideo from '../images/TechnologyVideo.mp4';
 import { useLang } from "../components/LangContext"; // 👈 Import the custom hook
 import WhatsAppChatWidget from "./WhatsAppChatWidget"; // Import the WhatsApp widget
 import Climate from "./Climate"
@@ -16,12 +16,21 @@ const Technology = () => {
             {/* Hero Section */}
             <div className="Tech-section">
                 <div className="Tech-row">
-                    <img src={techBg} alt={t("tech_hero_alt")} className="Tech-bg" />
+                    <video 
+                        src={TechnologyVideo} 
+                        className="Tech-bg" 
+                        autoPlay 
+                        loop 
+                        muted 
+                        playsInline
+                    />
+
                     <div className="Tech-content">
                         <h2>{t("tech_hero_title")}</h2>
                         <p>{t("tech_hero_desc")}</p>
                     </div>
                 </div>
+
             </div>
 
             {/* AI & ML Section */}

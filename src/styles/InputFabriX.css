@@ -1,8 +1,3 @@
-/* ===== Global Reset ===== */
-/* * {
-  box-sizing: border-box;
-} */
-
 /* ================================================= */
 /*                VIDEO HERO SECTION                 */
 /* ================================================= */
@@ -15,13 +10,11 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0;              /* 🔥 Remove padding */
-  margin: 0;               /* 🔥 Ensure no extra space */
-  border-radius: 0;        /* 🔥 No curves */
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
 }
 
-
-/* Background Video */
 .hero-video {
   position: absolute;
   inset: 0;
@@ -31,15 +24,7 @@
   z-index: 1;
 }
 
-/* Dark Overlay */
-/* .hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.35);
-  z-index: 2;
-} */
-
-/* Hero Text (ALWAYS WHITE) */
+/* Hero Text */
 .hero-text {
   position: relative;
   z-index: 3;
@@ -47,34 +32,26 @@
   max-width: 650px;
   margin-left: 50px;
   bottom: 40px;
-    text-shadow: 0px 4px 18px rgba(0, 0, 0, 0.75);
+  text-shadow: 0px 4px 18px rgba(0, 0, 0, 0.90);
 }
 
 .hero-text h2 {
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 10px;
-  font-family: "Poppins", sans-serif;
   color: #ffffff !important;
-    text-shadow: 0px 4px 18px rgba(0, 0, 0, 0.75);
-
 }
 
 .hero-text h3 {
   font-size: 2rem;
   margin-bottom: 12px;
   color: #f1f1f1 !important;
-    text-shadow: 0px 4px 18px rgba(0, 0, 0, 0.75);
-
 }
 
 .hero-text p {
   font-size: 1.3rem;
   line-height: 1.7;
   color: #ffffff !important;
-    text-shadow: 0px 4px 18px rgba(0, 0, 0, 0.75);
-
-    
 }
 
 /* ================================================= */
@@ -83,7 +60,7 @@
 
 .inputfabrx-section {
   width: 100%;
-  padding: 0 0 30px;
+  padding: 0;
   background: linear-gradient(180deg, #ffffff 100%, #f9fff9 0%);
   animation: fadeIn 1s ease;
 }
@@ -101,7 +78,7 @@
 }
 
 /* ================================================= */
-/*           UNEVEN 2-ROW OFFERING GRID              */
+/*      UNEVEN OFFERING GRID (Desktop Unique Layout) */
 /* ================================================= */
 
 .uneven-grid {
@@ -112,16 +89,14 @@
   grid-auto-flow: dense;
 }
 
-/* Row 1 */
-.card-0 { grid-column: span 3; grid-row: 1; }
-.card-1 { grid-column: span 3; grid-row: 1; }
+/* Desktop layout */
+.card-0 { grid-column: span 3; }
+.card-1 { grid-column: span 3; }
+.card-2 { grid-column: span 2; }
+.card-3 { grid-column: span 2; }
+.card-4 { grid-column: span 2; }
 
-/* Row 2 */
-.card-2 { grid-column: span 2; grid-row: 2; }
-.card-3 { grid-column: span 2; grid-row: 2; }
-.card-4 { grid-column: span 2; grid-row: 2; }
-
-/* Smaller title sizing for specific cards */
+/* Reduced text for small cards */
 .card-3 .inputfabrx-title-item,
 .card-4 .inputfabrx-title-item {
   font-size: 1.2rem;
@@ -129,7 +104,7 @@
 }
 
 /* ================================================= */
-/*       OFFERING CARDS: BACKGROUND + OVERLAY        */
+/*                 OFFERING CARDS                    */
 /* ================================================= */
 
 .inputfabrx-card {
@@ -144,7 +119,6 @@
   transition: all 0.3s ease;
 }
 
-/* Background Image */
 .card-bg {
   position: absolute;
   inset: 0;
@@ -155,7 +129,6 @@
   transition: transform 0.4s ease;
 }
 
-/* Overlay */
 .card-overlay {
   position: absolute;
   inset: 0;
@@ -172,28 +145,25 @@
   background: rgba(0,0,0,0.18);
 }
 
-/* Text Content */
+/* Card content */
 .card-content {
   position: relative;
   z-index: 3;
 }
 
 .inputfabrx-title-item {
-  color: #fff;
   font-size: 2.2rem;
-  margin-bottom: 10px;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
 }
 
 .inputfabrx-body-item {
   font-size: 1rem;
   color: #eaeaea;
-  line-height: 1.5;
 }
 
 /* ================================================= */
-/*                BENEFITS (3 Equal Boxes)           */
+/*                BENEFITS (3 Boxes)                 */
 /* ================================================= */
 
 .benefits-grid {
@@ -217,7 +187,6 @@
   font-weight: 700;
   color: #1b5e20;
   margin-bottom: 10px;
-  font-family: "Poppins", sans-serif;
 }
 
 .benefit-body {
@@ -255,7 +224,7 @@
 }
 
 /* ================================================= */
-/*                DECORATIVE LEAVES                  */
+/*                   DECORATIVE LEAVES               */
 /* ================================================= */
 
 .leaf-decor {
@@ -275,9 +244,10 @@
 .leaf-decor::after { bottom: -20px; right: -20px; width: 70px; height: 70px; }
 
 /* ================================================= */
-/*                   RESPONSIVE STYLES               */
+/*                   RESPONSIVENESS                  */
 /* ================================================= */
 
+/* ---------------- TABLET ---------------- */
 @media (max-width: 1024px) {
   .uneven-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -285,37 +255,49 @@
   }
 }
 
+/* ---------------- SMALL TABLET ---------------- */
 @media (max-width: 992px) {
   .benefits-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .benefit-box:nth-child(2) {
-    border-right: none;
+    border-right: none; /* Removes unwanted middle border */
   }
 }
 
+/* ---------------- MOBILE ---------------- */
 @media (max-width: 768px) {
+
+  /* Center hero text */
   .video-hero {
     height: 350px;
     justify-content: center;
     text-align: center;
   }
 
-  .uneven-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 200px 200px 200px;
+  .hero-text {
+    margin-left: 0;
+    bottom: 0;
+    padding: 0 15px;
+    max-width: 90%;
   }
 
-  .card-0,
-  .card-1,
-  .card-2,
-  .card-3,
-  .card-4 {
+  .hero-text h2 { font-size: 3rem; }
+  .hero-text h3 { font-size: 1.6rem; }
+
+  /* Grid becomes 2 columns */
+  .uneven-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 200px);
+  }
+
+  .card-0, .card-1, .card-2, .card-3, .card-4 {
     grid-column: auto;
     grid-row: auto;
   }
 
+  /* Benefits become 1 column */
   .benefits-grid {
     grid-template-columns: 1fr;
   }
@@ -326,6 +308,7 @@
   }
 }
 
+/* ---------------- SMALL MOBILE ---------------- */
 @media (max-width: 480px) {
   .video-hero {
     height: 300px;

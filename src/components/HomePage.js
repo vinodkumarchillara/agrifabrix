@@ -466,7 +466,14 @@ useEffect(() => {
 
         </div>
       </section>
-<section className="contact-details-container">
+<section
+  className="contact-details-container"
+  onClick={() =>
+    window.open(
+      "https://maps.app.goo.gl/LiDKvisvT1f4pvwy8"
+    )
+  }
+>
 
   <div className="contact-bg-overlay">
     <h2 className="contact-heading">{t("contact_details_heading")}</h2>
@@ -476,13 +483,6 @@ useEffect(() => {
       Panmaktha, Serilingampalle, Hyderabad, Telangana 500081.
     </p>
 
-    <div className="contact-social-icons">
-      <a href="https://x.com/YOUR_TWITTER"><FaXTwitter /></a>
-      <a href="https://www.facebook.com/profile.php?id=61575820740960"><FaFacebookF /></a>
-      <a href="https://in.linkedin.com/company/agrifabrix"><FaLinkedin /></a>
-      <a href="https://instagram.com/YOUR_INSTAGRAM"><FaInstagram /></a>
-      <a href="https://wa.me/7075483505"><FaWhatsapp /></a>
-    </div>
   </div>
 
 </section>
