@@ -209,6 +209,8 @@ useEffect(() => {
 
   return (
     <div className="homepage">
+     
+      
 
       {/* ================= HERO CAROUSEL ================= */}
 <section className="hero-carousel" id="home">
