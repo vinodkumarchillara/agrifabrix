@@ -91,7 +91,6 @@ const Navbar = () => {
                 if (window.innerWidth <= 768) {
                    toggleDropdown("solutions");
                 } else {
-                  navigate("/Solutions");      // ✅ go to Solutions page on desktop
                   setMenuOpen(false);
                   setOpenDropdown(null);
                 }

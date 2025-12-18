@@ -7,7 +7,6 @@ body {
 }
 
 /* =================== HERO CAROUSEL ================== */
-/* ================= HERO CAROUSEL ================= */
 
 .hero-carousel {
     position: relative;
@@ -60,12 +59,7 @@ body {
     text-align: right;
 }
 
-.text-right-slide {
-    left: auto !important;
-    right: 8% !important;
-    text-align: right;
-    
-}
+
 
 /* Only first slide: increase line spacing */
 .first-slide-spacing h1,
@@ -111,23 +105,9 @@ body {
     line-height: 1.5;
 }
 
-/* CTA Button */
-.hero-text-overlay .learn-more {
-    padding: 14px 28px;
-    background: #1c5839;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    display: inline-block;
-    font-weight: 500;
-    transition: 0.3s ease;
-}
 
-/* Hover upgrade for button */
-.hero-text-overlay .learn-more:hover {
-    background: #174b30;
-    transform: translateY(-2px);
-}
+
+
 
 .hero-text-overlay .learn-more {
     padding: 12px 28px;
