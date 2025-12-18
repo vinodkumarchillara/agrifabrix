@@ -67,8 +67,8 @@ a:hover {
 /* ====================== RESPONSIVE BREAKPOINTS ================= */
 /* =============================================================== */
 
-/* ---------- TABLETS (max-width: 1024px) ---------- */
-@media (max-width: 1024px) {
+/* ---------- TABLETS (max-width: 900px) ---------- */
+@media (max-width: 900px) {
   .cancellation-container {
     margin: 30px 20px;
     padding: 40px 20px;
@@ -88,8 +88,8 @@ a:hover {
   }
 }
 
-/* ---------- MOBILE (max-width: 768px) ---------- */
-@media (max-width: 768px) {
+/* ---------- MOBILE (max-width: 700px) ---------- */
+@media (max-width: 700px) {
   .cancellation-container {
     margin: 20px;
     padding: 30px 15px;
@@ -109,8 +109,8 @@ a:hover {
   }
 }
 
-/* ---------- SMALL MOBILE (max-width: 480px) ---------- */
-@media (max-width: 480px) {
+/* ---------- SMALL MOBILE (max-width: 420px) ---------- */
+@media (max-width: 420px) {
   .cancellation-container {
     margin: 15px;
     padding: 25px 15px;

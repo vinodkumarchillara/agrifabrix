@@ -306,3 +306,38 @@ body {
   from { opacity: 0; transform: translateY(18px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+@media (max-width: 768px) {
+  .sol-hero-banner {
+  height:27.5vh; 
+  }
+
+  .sol-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .sol-hero-text {
+    left: 16px;
+    bottom: 24px;
+    max-width: 90%;
+  }
+
+  .sol-hero-text h2 {
+    font-size: 1.2rem;   /* reduce heading */
+    line-height: 1.2;
+  }
+
+  .sol-hero-text p {
+    font-size: 0.96rem;  /* reduce paragraph */
+    line-height: 1.5;
+  }
+
+  .sol-hero-btn {
+    font-size: 0.8rem;   /* reduce button text */
+    padding: 10px 22px;
+  }
+}
+

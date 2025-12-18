@@ -89,10 +89,11 @@ const Navbar = () => {
               className="dropbtn"
               onClick={() => {
                 if (window.innerWidth <= 768) {
-                  navigate("/Solutions");
-                  toggleMenu();
+                   toggleDropdown("solutions");
                 } else {
-                  handleParentClick("solutions", "/Solutions");
+                  navigate("/Solutions");      // ✅ go to Solutions page on desktop
+                  setMenuOpen(false);
+                  setOpenDropdown(null);
                 }
               }}
             >
@@ -116,6 +117,7 @@ const Navbar = () => {
               <Link to="/TraceFabriX" onClick={toggleMenu}>{t("nav_trace_fabrix")}</Link>
               <Link to="/SupplyFabriX" onClick={toggleMenu}>{t("nav_supply_fabrix")}</Link>
               <Link to="/TradeFabriX" onClick={toggleMenu}>{t("nav_trade_fabrix")}</Link>
+              <Link to="/Solutions" onClick={toggleMenu}>{t("nav_solutions")}</Link>
             </div>
           </li>
 

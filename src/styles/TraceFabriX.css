@@ -87,7 +87,7 @@
 
 .tracefabrx-label h3 {
   font-size: 2rem;
-  color: #1b5e20;
+  color: #ffffff;
   margin-bottom: 2rem;
   text-align: center;
   font-family: "Poppins", sans-serif;
@@ -238,11 +238,16 @@
   .trace-hero-text p  { font-size: 1rem; }
 }
 
-/* Mobile Tablets */
+/* Tablets + Large Phones (Fix Layout but DO NOT change design) */
 @media (max-width: 768px) {
+
   .tracefabrx-hero {
-    height: 360px;
+    height: 300px;
     padding: 20px;
+  }
+
+  .trace-hero-video {
+    object-fit: cover;
   }
 
   .tracefabrx-card-grid {
@@ -262,22 +267,87 @@
     border-right: none !important;
     padding-right: 0;
   }
+
+  
 }
+
+/* ================= MOBILE FIX: HOW IT HELPS ================= */
+/* ================= MOBILE FIX: BENEFITS SECTION ================= */
+@media (max-width: 768px) {
+
+  .tracefabrx-benefits-grid {
+    display: flex;              /* override grid */
+    flex-direction: column;     /* stack vertically */
+    gap: 32px;                  /* spacing between cards */
+  }
+
+  .tracefabrx-benefit-box {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* Remove dashed divider */
+  .tracefabrx-benefit-box:not(:last-child) {
+    border-right: none !important;
+    padding-right: 0 !important;
+  }
+
+  .trace-benefit-icon {
+    margin-bottom: 16px;
+  }
+
+  .trace-benefit-title {
+    font-size: 1.3rem;
+  }
+
+  .trace-benefit-body {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+
 
 /* Phones */
 @media (max-width: 480px) {
-  .trace-hero-text h2 { font-size: 1.8rem; }
-  .trace-hero-text h3 { font-size: 1rem; }
-  .trace-hero-text p  { font-size: 0.9rem; }
 
-  .tracefabrx-card-grid {
-    grid-template-columns: 1fr;
+  .tracefabrx-hero {
+  height: 330px;
+  display: flex;
+  align-items: center;      /* vertical center */
+  justify-content: center;  /* horizontal center */
+  padding: 20px;
+  text-align: center;
+}
+
+
+  .trace-hero-text {
+    position: static;        /* 🔥 IMPORTANT */
+    margin:0;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 40px;
   }
 
-  .tracefabrx-benefits-grid {
-    grid-template-columns: 1fr;
+  .trace-hero-text h2 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  .trace-hero-text h3 {
+    font-size: 0.8rem;
+  }
+
+  .trace-hero-text p {
+    font-size: 0.7rem;
   }
 }
+
+
+
+
 
 /* Fade Animation */
 @keyframes fadeIn {

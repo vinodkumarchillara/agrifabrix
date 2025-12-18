@@ -253,21 +253,21 @@ useEffect(() => {
   <div class="highlight ai">
     <div class="highlight-text">
       <h1>AI-Powered Insights</h1>
-      <p>Optimizing supply chain with real-time data.</p>
+      <p>Optimizing supply chain with <br></br>real-time data.</p>
     </div>
   </div>
 
   <div class="highlight finance">
-    <div class="highlight-text">
+    <div class="highlight-text1">
       <h1>Financial Access</h1>
-      <p>BNPL, invoice financing, and agrifabrix loans.</p>
+      <p>BNPL, invoice financing, <br></br>and agrifabrix loans.</p>
     </div>
   </div>
 
   <div class="highlight blockchain">
     <div class="highlight-text">
       <h1>Blockchain Traceability</h1>
-      <p>Ensuring transparency and fraud prevention.</p>
+      <p>Ensuring transparency and <br></br>fraud prevention.</p>
     </div>
   </div>
 
@@ -277,19 +277,28 @@ useEffect(() => {
 <div className="section-border top-border"></div>
 
 <section className="vision-mission new-layout paint-section">
-  <div className="vision-image-box">
-    <img src={mission} alt={t("home_image_alt_mission")} className={zoomOut ? "zoom-out" : ""} />
-  </div>
 
-  <div className="vision-text-box">
-    <h2>{t("home_vision_heading")}</h2>
-    <p>{t("home_vision_text")}</p>
+  <div className="vision-section">   {/* ⭐ Missing wrapper added */}
 
-    <h2>{t("home_mission_heading")}</h2>
-    <p>{t("home_mission_text")}</p>
+    <div className="vision-image-box">
+      <img 
+        src={mission} 
+        alt={t("home_image_alt_mission")} 
+        className={zoomOut ? "zoom-out" : ""} 
+      />
+    </div>
+
+    <div className="vision-text-box">
+      <h2>{t("home_vision_heading")}</h2>
+      <p>{t("home_vision_text")}</p>
+
+      <h2>{t("home_mission_heading")}</h2>
+      <p>{t("home_mission_text")}</p>
+    </div>
+
   </div>
+  
 </section>
-
 <div className="section-border bottom-border"></div>
 
 

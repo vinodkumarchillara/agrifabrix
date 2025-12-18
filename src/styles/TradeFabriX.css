@@ -229,8 +229,7 @@
 @media (max-width: 768px) {
 
   .trad-hero.video-hero {
-    height: 350px;
-    justify-content: center;
+    height: 30vh;
   }
 
   .hero-text {
@@ -247,9 +246,9 @@
 /* Mobile Phones */
 @media (max-width: 480px) {
 
-  .hero-text h2 { font-size: 2rem; }
-  .hero-text h3 { font-size: 1rem; }
-  .hero-text p { font-size: 1rem; }
+  .hero-text h2 { font-size: 1.6rem; }
+  .hero-text h3 { font-size: 0.8rem; }
+  .hero-text p { font-size: 0.8rem; }
 
   .trad-card-grid {
     grid-template-columns: 1fr;

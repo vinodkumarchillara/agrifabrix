@@ -1,8 +1,13 @@
+/* ===============================
+   TERMS & CONDITIONS PAGE
+==================================*/
+
+/* Main Container */
 .terms-container {
   max-width: 900px;
   background: white;
   padding: 100px 20px 50px;
-  margin-left: 230px;
+  margin-left: 230px;   /* YOUR ORIGINAL DESIGN — NOT CHANGED */
   margin-bottom: 20px;
   color: #333;
   line-height: 1.6;
@@ -34,9 +39,20 @@
   padding-left: 20px;
 }
 
-/* ==============================
-       TABLET RESPONSIVE
-================================ */
+/* ===============================
+       FIX FOR ALL SMALLER SCREENS
+       (Keeps your design SAME)
+==================================*/
+
+/* Tablets & small laptops */
+@media (max-width: 1300px) {
+  .terms-container {
+    margin-left: auto;  /* Centering WITHOUT changing design */
+    margin-right: auto;
+  }
+}
+
+/* Tablets (≤1024px) */
 @media (max-width: 1024px) {
   .terms-container {
     margin: 20px;
@@ -57,11 +73,11 @@
   }
 }
 
-/* ==============================
-       MOBILE RESPONSIVE
-================================ */
+/* Mobile (≤600px) */
 @media (max-width: 600px) {
   .terms-container {
+    margin-left: 10px;   /* PERFECT FIT WITHOUT CHANGING DESIGN */
+    margin-right: 10px;
     padding: 20px;
   }
 
@@ -77,4 +93,10 @@
   .terms-list {
     font-size: 0.9rem;
   }
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }

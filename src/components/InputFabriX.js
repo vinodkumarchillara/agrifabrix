@@ -48,7 +48,7 @@ const InputFabriX = () => {
                     muted 
                     playsInline
                 >
-                    <source src={require("../images/ecommerce_vid.mp4")} type="video/mp4" />
+                    <source src={require("../images/InputfabrixV.mp4")} type="video/mp4" />
                 </video>
 
                 {/* DARK OVERLAY */}

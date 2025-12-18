@@ -4,7 +4,8 @@
 
 .privacy-container {
   max-width: 900px;
-  margin: 80px auto 20px;  /* centered for all screens */
+  width: 100%;
+  margin: 80px auto 20px;
   background: white;
   padding: 80px 30px 40px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -46,60 +47,35 @@
   color: #007bff;
   text-decoration: none;
 }
+
 .privacy-container a:hover {
   text-decoration: underline;
 }
 
 /* ===========================
-   TABLET (≤ 1024px)
+   RESPONSIVE FIX (NO DESIGN CHANGE)
    =========================== */
+
+/* Tablets and small laptops */
 @media (max-width: 1024px) {
   .privacy-container {
-    margin: 40px 20px;
-    padding: 40px 25px;
-  }
-
-  .privacy-heading {
-    font-size: 2rem;
-  }
-
-  .privacy-subheading {
-    font-size: 1.25rem;
+    margin: 40px auto;
+    padding: 60px 25px;
   }
 }
 
-/* ===========================
-   MOBILE (≤ 768px)
-   =========================== */
+/* Mobile — ONLY width adjustment, no design changes */
 @media (max-width: 768px) {
   .privacy-container {
-    margin: 20px 15px;
-    padding: 28px 20px;
-  }
-
-  .privacy-heading {
-    font-size: 1.7rem;
-  }
-
-  .privacy-subheading {
-    font-size: 1.1rem;
-  }
-
-  .privacy-paragraph,
-  .privacy-list {
-    font-size: 0.95rem;
+    width: 100%;
+    margin: 20px auto;
+    padding: 40px 20px;
   }
 }
 
-/* ===========================
-   SMALL MOBILE (≤ 480px)
-   =========================== */
+/* Small mobile */
 @media (max-width: 480px) {
   .privacy-container {
-    padding: 22px 16px;
-  }
-
-  .privacy-heading {
-    font-size: 1.5rem;
+    padding: 30px 16px;
   }
 }

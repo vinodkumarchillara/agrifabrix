@@ -200,8 +200,8 @@
 /* ===============     RESPONSIVE BREAKPOINTS ========== */
 /* ===================================================== */
 
-/* -------- TABLET -------- */
-@media (max-width: 1024px) {
+/* -------- TABLET (SAFE) -------- */
+@media (max-width: 900px) {
   .footer-content {
     flex-direction: column;
     text-align: center;
@@ -231,8 +231,8 @@
   }
 }
 
-/* -------- MOBILE -------- */
-@media (max-width: 768px) {
+/* -------- MOBILE (SAFE) -------- */
+@media (max-width: 650px) {
   .footer {
     padding: 40px 20px;
   }
@@ -250,8 +250,8 @@
   }
 }
 
-/* -------- SMALL MOBILE -------- */
-@media (max-width: 480px) {
+/* -------- SMALL MOBILE (SAFE) -------- */
+@media (max-width: 420px) {
   .footer {
     padding: 35px 15px;
   }

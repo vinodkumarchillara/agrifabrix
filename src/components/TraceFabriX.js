@@ -9,6 +9,7 @@ import croptrack from "../images/croptrack.png";
 import qualityComp from "../images/quality_comp.png";
 import digitalCert from "../images/digital_cert.png";
 import aiCrops from "../images/ai_crops.png";
+import { color } from "framer-motion";
 
 const TraceFabriX = () => {
   const { t } = useLang(); // 👈 Access the global translation function
@@ -113,7 +114,7 @@ const offeringImages = [
         {/* HOW IT HELPS */}
 <div className="tracefabrx-benefits-section">
   <div className="tracefabrx-label">
-    <h3>{t("trace_benefits_heading")}</h3>
+    <h3 >{t("trace_benefits_heading")}</h3>
   </div>
 
   <div className="tracefabrx-benefits-grid three-col">

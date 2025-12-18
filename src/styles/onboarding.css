@@ -1,89 +1,75 @@
-/* ========================================================= */
-/*                    GLOBAL RESET                           */
-/* ========================================================= */
-
 * {
   box-sizing: border-box;
 }
 
-/* ========================================================= */
-/*                    FORM WRAPPER                           */
-/* ========================================================= */
-
+/* body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+} */
 .form-wrapper {
   max-width: 600px;
-  margin: 100px auto 60px;
+  margin: 100px auto 60px; /* Added 60px bottom margin */
   padding: 24px;
   background-color: #ffffff;
-  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 0.5s ease;
+  
+  border-radius: 12px;
+  box-sizing: border-box;
 }
 
-/* Heading Section */
+
 .form-heading-container {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.form-heading-container h2,
-.ant-typography h3 {
-  font-size: 24px;
+:where(.css-dev-only-do-not-override-1d4w9r2).ant-form-vertical .ant-form-item:not(.ant-form-item-horizontal) .ant-form-item-label >label, :where(.css-dev-only-do-not-override-1d4w9r2).ant-form-vertical .ant-form-item:not(.ant-form-item-horizontal) .ant-col-24.ant-form-item-label >label, :where(.css-dev-only-do-not-override-1d4w9r2).ant-form-vertical .ant-form-item:not(.ant-form-item-horizontal) .ant-col-xl-24.ant-form-item-label >label {
+  margin: 0;
   font-weight: 700;
-  color: #333;
-  margin-bottom: 10px;
 }
 
 .form-heading-container p {
   font-size: 14px;
   color: #555;
 }
-
-/* ========================================================= */
-/*                  ANT DESIGN LABEL FIX                     */
-/* ========================================================= */
-/*🔥 Makes Antd vertical form labels clean & bold */
-
-.ant-form-vertical .ant-form-item-label > label {
-  margin: 0 !important;
-  font-weight: 700 !important;
+.form-heading-container h2,
+.ant-typography h3 {
+  font-size: 24px;
+  font-weight: 700; /* Bold headings */
   color: #333;
+  margin-bottom: 10px;
 }
 
-/* ========================================================= */
-/*                   INPUT / TEXTAREA / SELECT               */
-/* ========================================================= */
+.onboarding-form-container {
+  margin-top: 10px;
+}
 
 .ant-input,
 textarea,
 .ant-select-selector {
   border-color: #d9d9d9 !important;
+  box-shadow: none !important;
   border-radius: 6px;
   padding: 12px;
   font-size: 14px;
-  box-shadow: none !important;
 }
 
-/* Smaller input group */
 .small-input .ant-input,
 .small-input textarea,
 .small-input .ant-select-selector {
   padding: 8px 10px;
   font-size: 13px;
+  border-radius: 6px;
 }
 
-/* Focus State */
 .ant-input:focus,
 textarea:focus,
 .ant-select-focused .ant-select-selector {
   border-color: #1890ff !important;
-  box-shadow: 0 0 0 2px rgba(24,144,255,0.2) !important;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2) !important;
   outline: none;
 }
-
-/* ========================================================= */
-/*                     CHECKBOX CUSTOM                       */
-/* ========================================================= */
 
 .ant-checkbox-checked .ant-checkbox-inner {
   background-color: #1c5839 !important;
@@ -93,49 +79,48 @@ textarea:focus,
 .ant-checkbox-wrapper:hover .ant-checkbox-inner,
 .ant-checkbox:hover .ant-checkbox-inner,
 .ant-checkbox-input:focus + .ant-checkbox-inner {
-  border-color: #bbb !important;
+  border-color: #d9d9d9 !important;
   box-shadow: none !important;
 }
-
-/* ========================================================= */
-/*                   GREEN SUBMIT BUTTON                     */
-/* ========================================================= */
 
 .ant-btn-green {
   background-color: #1c5839;
   color: #fff;
   border: none;
   padding: 10px 20px;
-  font-size: 16px;
   border-radius: 6px;
+  font-size: 16px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .ant-btn-green:hover {
   background-color: #14632a;
 }
 
-/* ========================================================= */
-/*                     RESPONSIVE RULES                      */
-/* ========================================================= */
-
-@media (max-width: 1024px) {
+@media (max-width: 650px) {
   .form-wrapper {
     max-width: 100%;
-    padding: 18px;
+    padding: 16px;
     margin-top: 50px;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
 
   .form-heading-container h2,
   .ant-typography h3 {
     font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
   }
 
   .form-heading-container p {
     font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .onboarding-form-container {
+    margin-top: 8px;
   }
 
   .ant-input,
@@ -156,11 +141,7 @@ textarea:focus,
     width: 100%;
     padding: 12px;
     font-size: 15px;
+    border-radius: 6px;
   }
 }
 
-/* Smooth Fade Animation */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}

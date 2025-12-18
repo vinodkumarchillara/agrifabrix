@@ -283,15 +283,24 @@
 /* Mobiles */
 @media (max-width: 480px) {
   .sup-hero {
-    height: 300px;
+    height: 30vh;
   }
 
   .sup-video-text h2 {
     font-size: 1.6rem;
+    text-align: center;
+    margin-right: 20px;
   }
 
   .sup-video-text h3 {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-right: 20px;
+  }
+  .sup-video-text p {
+    font-size: 0.7rem;
+    text-align: center;
+    margin-right: 20px;
   }
 
   .sup-card-grid {

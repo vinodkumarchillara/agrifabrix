@@ -300,8 +300,9 @@
 /* ========================================================= */
 
 
-/* -------- TABLET (max-width: 1024px) -------- */
-@media (max-width: 1024px) {
+/* -------- TABLET (max-width: 900px) -------- */
+@media (max-width: 900px) {
+
   .her-section h1 {
     font-size: 40px;
   }
@@ -343,8 +344,9 @@
   }
 }
 
-/* -------- MOBILE (max-width: 768px) -------- */
-@media (max-width: 768px) {
+/* -------- MOBILE (max-width: 700px) -------- */
+@media (max-width: 700px) {
+
   .her-section h1 {
     font-size: 32px;
   }
@@ -382,8 +384,9 @@
   }
 }
 
-/* -------- SMALL MOBILE (max-width: 480px) -------- */
-@media (max-width: 480px) {
+/* -------- SMALL MOBILE (max-width: 420px) -------- */
+@media (max-width: 420px) {
+
   .her-section h1 {
     font-size: 26px;
   }
@@ -404,5 +407,15 @@
 
   .leader-image {
     height: 260px;
+  }
+}
+
+/* ===== FIX: SHOW FULL SECOND VIDEO ON MOBILE ===== */
+@media (max-width: 700px) {
+  .journey-video {
+    width: 100%;
+    height: auto;          /* allow natural height */
+    max-height: 100%;     /* control layout */
+    object-fit: contain;   /* show full video */
   }
 }

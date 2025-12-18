@@ -38,7 +38,7 @@
 
 /* Icon */
 .whatsapp-icon {
-  font-size: 22px;
+  font-size: 30px;
 }
 
 /* Text */
@@ -78,7 +78,7 @@
   }
 
   .whatsapp-icon {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 
@@ -93,7 +93,7 @@
   }
 
   .whatsapp-icon {
-    font-size: 18px;
+    font-size: 30px;
   }
 
   /* If needed, shrink notification bubble slightly */

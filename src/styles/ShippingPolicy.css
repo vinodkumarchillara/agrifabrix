@@ -10,20 +10,22 @@ body {
 
 /* ===========================
    SHIPPING POLICY CONTAINER
+   (DESKTOP DESIGN KEPT 100%)
    =========================== */
 .shipping-policy-container {
   max-width: 800px;
-  margin: 80px auto 20px; /* centered layout */
+  width: 100%;
+  margin: 80px auto 20px;
   padding: 80px 40px 40px;
   background: #ffffff;
-
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   line-height: 1.6;
+  box-sizing: border-box;
 }
 
 /* ===========================
-   HEADINGS & TEXT
+   HEADINGS & TEXT (UNCHANGED)
    =========================== */
 .policy-title {
   text-align: center;
@@ -56,56 +58,25 @@ body {
   margin-bottom: 6px;
 }
 
-/* ===========================
-   RESPONSIVE — TABLETS (≤1024px)
-   =========================== */
+/* ============================================================
+   RESPONSIVE FIX — WITHOUT CHANGING ANY DESIGN
+   (ONLY MAKES CONTENT FIT ON SMALL SCREENS)
+   ============================================================ */
+
+/* Tablets & Mobile */
 @media (max-width: 1024px) {
   .shipping-policy-container {
-    margin: 40px 20px;
-    padding: 40px 25px;
-  }
-
-  .policy-title {
-    font-size: 1.8rem;
-  }
-
-  .section-heading {
-    font-size: 1.15rem;
+    width: 100%;
+    margin: 40px auto;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
-/* ===========================
-   RESPONSIVE — MOBILE (≤768px)
-   =========================== */
-@media (max-width: 768px) {
-  .shipping-policy-container {
-    margin: 25px 15px;
-    padding: 28px 20px;
-  }
-
-  .policy-title {
-    font-size: 1.6rem;
-  }
-
-  .section-heading {
-    font-size: 1.1rem;
-  }
-
-  .policy-section p,
-  .policy-section li {
-    font-size: 0.95rem;
-  }
-}
-
-/* ===========================
-   SMALL MOBILE (≤480px)
-   =========================== */
+/* Small Mobile */
 @media (max-width: 480px) {
   .shipping-policy-container {
-    padding: 22px 16px;
-  }
-
-  .policy-title {
-    font-size: 1.4rem;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
